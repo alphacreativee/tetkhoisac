@@ -1,0 +1,12 @@
+.event {
+  position: relative;
+  width: 100%;
+  z-index: 1;
+  &-top {
+    position: absolute;
+    z-index: 2;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 50px;
+  }
+}
