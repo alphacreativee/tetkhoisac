@@ -341,3 +341,31 @@ body {
 .footer-logo a {
   display: inline-block;
 }
+
+.introduction {
+  position: relative;
+  width: 100%;
+  z-index: 1;
+}
+.introduction-art {
+  position: absolute;
+  z-index: 2;
+}
+.introduction-art.art-1 {
+  right: 200px;
+  top: 0;
+  transform: translateY(-25%);
+}
+.introduction-art.art-2 {
+  left: 70px;
+  top: 0;
+  transform: translateY(-5%);
+}
+.introduction-art.art-3 {
+  left: 50px;
+  top: 50%;
+}
+.introduction-art.art-4 {
+  bottom: 100px;
+  right: 50px;
+}
