@@ -1,5 +1,9 @@
 import { preloadImages } from "../../libs/utils.js";
-import { scrollToTop } from "../../js/index/global.js";
+import {
+  scrollToTop,
+  swiperSong,
+  swiperTickets,
+} from "../../js/index/global.js";
 ("use strict");
 $ = jQuery;
 
@@ -117,6 +121,8 @@ const init = () => {
   gsap.registerPlugin(ScrollTrigger);
   scrollToTop();
   formRegister();
+  swiperSong();
+  swiperTickets();
 };
 preloadImages("img").then(() => {
   init();
