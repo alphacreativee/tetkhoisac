@@ -25,6 +25,10 @@
           font-size: 20px;
           line-height: 1;
           font-weight: 700;
+          transition: color 0.3s ease-in-out;
+          &.active {
+            color: #fc3e28;
+          }
         }
       }
     }

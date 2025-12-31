@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title>
     <!-- import favicon -->
-    <link rel="icon" href="./assets/images/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="./assets/images/favicon.png" type="image/x-icon" />
     <!-- meta -->
     <meta property="og:url" content="" />
     <meta property="og:type" content="website" />
@@ -95,7 +95,7 @@
           <a href="" class="btn-general"> Lấy vé tham dự ngayyyyy!</a>
         </div>
       </section>
-      <section class="introduction">
+      <section class="introduction" id="introduction">
         <div class="introduction-main">
           <picture>
             <source media="(max-width: 768px)" srcset="image-mobile.jpg" />
@@ -115,7 +115,7 @@
           <img src="./assets/images/art-4.svg" alt="" />
         </div>
       </section>
-      <section class="event">
+      <section class="event" id="location">
         <div class="event-top">
           <img src="./assets/images/event-top.svg" alt="" />
         </div>
@@ -126,7 +126,7 @@
           </picture>
         </div>
       </section>
-      <section class="music">
+      <section class="music" id="music">
         <div class="music-main">
           <picture>
             <source media="(max-width: 768px)" srcset="image-mobile.jpg" />
@@ -143,29 +143,71 @@
               </div>
               <div class="swiper-slide">
                 <div class="music-song">
-                  <img src="./assets/images/issac.png" alt="" />
+                  <img src="./assets/images/singer-1.png" alt="" />
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="music-song">
+                  <img src="./assets/images/singer-2.png" alt="" />
                 </div>
               </div>
               <div class="swiper-slide">
                 <div class="music-song">
-                  <img src="./assets/images/issac.png" alt="" />
+                  <img src="./assets/images/singer-3.png" alt="" />
                 </div>
               </div>
               <div class="swiper-slide">
                 <div class="music-song">
-                  <img src="./assets/images/issac.png" alt="" />
+                  <img src="./assets/images/singer-4.png" alt="" />
                 </div>
               </div>
               <div class="swiper-slide">
                 <div class="music-song">
-                  <img src="./assets/images/issac.png" alt="" />
+                  <img src="./assets/images/singer-5.png" alt="" />
                 </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-arrows">
+            <div class="swiper-button-next custom-arrow">
+              <div class="arrow-wrapper">
+                <svg
+                  width="41"
+                  height="34"
+                  viewBox="0 0 41 34"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M25.5879 33.5L25.6387 32.9531C25.9346 29.7901 26.8837 26.9985 28.4951 24.5908L28.5 24.584C29.9414 22.5072 31.3912 20.7849 32.8506 19.4238L0.499999 19.4238L0.499999 14.4893L32.7822 14.4893C31.3475 13.0958 29.9198 11.3747 28.5 9.3291L28.498 9.32715C26.8836 6.97534 25.9346 4.21 25.6387 1.04687L25.5879 0.499999L30.4756 0.5L30.5332 0.93457C30.7553 2.61455 31.3101 4.21233 32.2021 5.73047L32.207 5.7373C33.1097 7.33039 34.2096 8.78158 35.5078 10.0908C36.8717 11.4082 38.2602 12.5214 39.6719 13.4326L39.9004 13.5801L39.9004 20.4258L39.6641 20.5723C38.197 21.4828 36.7823 22.5943 35.4209 23.9092C34.12 25.2212 33.0191 26.646 32.1162 28.1826C31.2818 29.7586 30.7553 31.3855 30.5332 33.0654L30.4756 33.5L25.5879 33.5Z"
+                    fill="#4D67FF"
+                    stroke="#4D67FF"
+                  />
+                </svg>
+              </div>
+            </div>
+            <div class="swiper-button-prev custom-arrow">
+              <div class="arrow-wrapper">
+                <svg
+                  width="41"
+                  height="34"
+                  viewBox="0 0 41 34"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M14.8125 33.5L14.7617 32.9531C14.4658 29.7901 13.5167 26.9985 11.9053 24.5908L11.9004 24.584C10.459 22.5072 9.00922 20.7849 7.54981 19.4238L39.9004 19.4238L39.9004 14.4893L7.61816 14.4893C9.05288 13.0958 10.4806 11.3747 11.9004 9.3291L11.9023 9.32715C13.5167 6.97534 14.4658 4.21 14.7617 1.04687L14.8125 0.499999L9.9248 0.5L9.86719 0.93457C9.64507 2.61455 9.09026 4.21233 8.19824 5.73047L8.19336 5.7373C7.29069 7.33039 6.19074 8.78158 4.89258 10.0908C3.52868 11.4082 2.14023 12.5214 0.728516 13.4326L0.500001 13.5801L0.500001 20.4258L0.736329 20.5723C2.20342 21.4828 3.61807 22.5943 4.97949 23.9092C6.28042 25.2212 7.38131 26.646 8.28418 28.1826C9.11859 29.7586 9.64509 31.3855 9.86719 33.0654L9.92481 33.5L14.8125 33.5Z"
+                    fill="#4D67FF"
+                    stroke="#4D67FF"
+                  />
+                </svg>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <section class="map">
+      <section class="map" id="map">
         <div class="map-main">
           <picture>
             <source media="(max-width: 768px)" srcset="image-mobile.jpg" />
@@ -173,7 +215,7 @@
           </picture>
         </div>
       </section>
-      <section class="tickets">
+      <section class="tickets" id="tickets">
         <div class="tickets-title">
           Làm sao để nhận vé tham dự sự kiện tết khởi sắc 2026 tại HHCM?
         </div>
@@ -272,6 +314,7 @@
     <script src="./assets/libs/bootstrap.bundle.min.js"></script>
     <script src="./assets/libs/imagesloaded.pkgd.min.js"></script>
     <script src="./assets/libs/swiper-bundle.min.js"></script>
+    <script src="./assets/libs/ScrollToPlugin.min.js"></script>
     <!-- import custom js -->
     <script type="module" src="./assets/main/js/script.min.js"></script>
 

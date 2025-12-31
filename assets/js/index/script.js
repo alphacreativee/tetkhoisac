@@ -3,6 +3,7 @@ import {
   scrollToTop,
   swiperSong,
   swiperTickets,
+  scrollToSection,
 } from "../../js/index/global.js";
 ("use strict");
 $ = jQuery;
@@ -25,6 +26,7 @@ const init = () => {
   formRegister();
   swiperSong();
   swiperTickets();
+  scrollToSection();
 };
 preloadImages("img").then(() => {
   init();
