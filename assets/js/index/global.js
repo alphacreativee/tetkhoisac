@@ -16,3 +16,15 @@ export function swiperSong() {
     },
   });
 }
+export function swiperTickets() {
+  if (!document.querySelector(".swiper-tickets")) return;
+  var swiper = new Swiper(".swiper-tickets", {
+    slidesPerView: 5,
+    spaceBetween: 24,
+
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+  });
+}

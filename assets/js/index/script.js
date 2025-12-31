@@ -1,5 +1,9 @@
 import { preloadImages } from "../../libs/utils.js";
-import { scrollToTop, swiperSong } from "../../js/index/global.js";
+import {
+  scrollToTop,
+  swiperSong,
+  swiperTickets,
+} from "../../js/index/global.js";
 ("use strict");
 $ = jQuery;
 
@@ -20,6 +24,7 @@ const init = () => {
   scrollToTop();
   formRegister();
   swiperSong();
+  swiperTickets();
 };
 preloadImages("img").then(() => {
   init();
