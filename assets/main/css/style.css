@@ -302,9 +302,14 @@ body {
 .footer-container {
   padding: 100px 0;
 }
+.footer-container .footer-back-top {
+  display: flex;
+  justify-content: flex-end;
+}
 .footer-wrapper {
   display: grid;
   grid-template-columns: 3fr 5fr 2fr;
+  gap: 12px;
 }
 .footer-title {
   font-size: 15px;
@@ -314,8 +319,25 @@ body {
   text-transform: uppercase;
   margin-bottom: 24px;
 }
+.footer-main {
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr;
+}
+.footer-main-col.follow-us {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
 .footer-main-col.follow-us ul {
   display: flex;
   align-items: center;
   gap: 18px;
+}
+.footer-main-col ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.footer-logo a {
+  display: inline-block;
 }
