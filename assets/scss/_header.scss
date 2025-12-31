@@ -1,0 +1,32 @@
+#header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 999;
+}
+.header {
+  &-main {
+    padding: 40px 0;
+  }
+  &-logo {
+    pointer-events: auto;
+  }
+  &-menu {
+    pointer-events: auto;
+    ul {
+      display: flex;
+      align-items: center;
+      gap: 46px;
+      li {
+        a {
+          color: var(--color-white);
+          font-size: 20px;
+          line-height: 1;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+}

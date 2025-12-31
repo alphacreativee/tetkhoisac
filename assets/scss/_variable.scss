@@ -1,5 +1,11 @@
 :root {
   --font-phudu: "Phudu", sans-serif;
+  --color-white: #fff;
+}
+.limit-w {
+  max-width: calc(calc(10 / 12 * 100%));
+  width: 100%;
+  margin: 0 auto;
 }
 .font-phudu {
   font-family: var(--font-phudu);
@@ -63,4 +69,7 @@
 
 .fw-semibold {
   font-weight: 600;
+}
+.color-white {
+  color: var(--color-white);
 }
