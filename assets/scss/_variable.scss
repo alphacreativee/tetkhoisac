@@ -3,6 +3,10 @@
   --font-archivo: "Archivo", sans-serif;
   --color-white: #fff;
 }
+body,
+* {
+  font-family: var(--font-phudu);
+}
 .limit-w {
   max-width: calc(calc(10 / 12 * 100%));
   width: 100%;
