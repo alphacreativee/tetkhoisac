@@ -1,0 +1,21 @@
+.btn-general {
+  font-size: 24px;
+  line-height: 27px;
+  font-weight: 900;
+  color: #4d67ff;
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 48px;
+}
+.back-to-top {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: #2b190f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &:hover {
+    cursor: pointer;
+  }
+}

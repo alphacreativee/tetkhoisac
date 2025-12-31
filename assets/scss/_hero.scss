@@ -12,4 +12,46 @@
       object-fit: cover;
     }
   }
+  &-button {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 50px;
+    a {
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(
+        177.27deg,
+        #fbfb79 19.82%,
+        #fdda50 84.84%,
+        #ffa710 137.36%
+      );
+      z-index: 1;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(
+          177.27deg,
+          #fbfb79 19.82%,
+          #fdda50 84.84%,
+          #ffa710 137.36%
+        );
+        opacity: 0;
+        transition: opacity 0.5s ease;
+        z-index: -1;
+      }
+
+      &:hover {
+        color: #4d67ff;
+        &::before {
+          opacity: 1;
+        }
+      }
+    }
+  }
 }

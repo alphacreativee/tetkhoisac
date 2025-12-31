@@ -1,0 +1,39 @@
+@font-face {
+    font-family: 'Archivo';
+    src: url('Archivo-Black.eot');
+    src: url('Archivo-Black.eot?#iefix') format('embedded-opentype'),
+        url('Archivo-Black.woff2') format('woff2'),
+        url('Archivo-Black.woff') format('woff'),
+        url('Archivo-Black.ttf') format('truetype'),
+        url('Archivo-Black.svg#Archivo-Black') format('svg');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Archivo';
+    src: url('Archivo-Bold.eot');
+    src: url('Archivo-Bold.eot?#iefix') format('embedded-opentype'),
+        url('Archivo-Bold.woff2') format('woff2'),
+        url('Archivo-Bold.woff') format('woff'),
+        url('Archivo-Bold.ttf') format('truetype'),
+        url('Archivo-Bold.svg#Archivo-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Archivo';
+    src: url('Archivo-ExtraBold.eot');
+    src: url('Archivo-ExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('Archivo-ExtraBold.woff2') format('woff2'),
+        url('Archivo-ExtraBold.woff') format('woff'),
+        url('Archivo-ExtraBold.ttf') format('truetype'),
+        url('Archivo-ExtraBold.svg#Archivo-ExtraBold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
