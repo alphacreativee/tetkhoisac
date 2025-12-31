@@ -454,8 +454,10 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
-.footer-main-col.follow-us {
-  grid-column: 4/5;
+@media (min-width: 992px) {
+  .footer-main-col.follow-us {
+    grid-column: 4/5;
+  }
 }
 .footer-main-col.follow-us ul {
   display: flex;

@@ -28,7 +28,9 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
     &-col {
       &.follow-us {
-        grid-column: 4 / 5;
+        @media (min-width: 992px) {
+          grid-column: 4 / 5;
+        }
         // display: flex;
         // flex-direction: column;
         // align-items: flex-end;
