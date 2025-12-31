@@ -452,12 +452,10 @@ body {
 }
 .footer-main {
   display: grid;
-  grid-template-columns: 1fr 1fr 2fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 .footer-main-col.follow-us {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
+  grid-column: 4/5;
 }
 .footer-main-col.follow-us ul {
   display: flex;
