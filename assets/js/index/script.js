@@ -16,9 +16,107 @@ gsap.ticker.add((time) => {
 
 gsap.ticker.lagSmoothing(0);
 
-function formRegister() {
-  if ($("#form-register").length < 1) return;
+function getParam(name) {
+  const url = new URL(window.location.href);
+  return url.searchParams.get(name) || "N/A";
 }
+
+function formRegister() {
+  const form = document.getElementById("form-register");
+  if (!form) return;
+
+  const submitBtn = form.querySelector("button[type='submit']");
+  const acceptCheckbox = form.querySelector("#accept");
+  const fields = form.querySelectorAll(".field-item input");
+  const messageSuccess = document.querySelector(".message-success");
+
+  form.querySelector('[name="utm_source"]').value = getParam("utm_source");
+  form.querySelector('[name="utm_medium"]').value = getParam("utm_medium");
+
+  submitBtn.disabled = true;
+
+  acceptCheckbox.addEventListener("change", function () {
+    submitBtn.disabled = !this.checked;
+  });
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    let isValid = true;
+    form
+      .querySelectorAll(".field-item")
+      .forEach((el) => el.classList.remove("error"));
+
+    fields.forEach((input) => {
+      if (input.type !== "checkbox" && input.value.trim() === "") {
+        input.closest(".field-item").classList.add("error");
+        isValid = false;
+      }
+    });
+
+    if (!acceptCheckbox.checked) {
+      acceptCheckbox.closest(".field-item").classList.add("error");
+      isValid = false;
+    }
+
+    if (!isValid) return;
+
+    submitBtn.classList.add("aloading");
+
+    const formData = new FormData(form);
+
+    fetch(
+      "https://script.google.com/macros/s/AKfycbzJSGh6G7qgh1TkXOkqoXuNJz0M7inCU5n9aD1pmAaAoBqJmxrrXtT3fvKKcOpoMGia/exec",
+      {
+        method: "POST",
+        body: formData,
+      }
+    )
+      .then((res) => res.json())
+      .then((data) => {
+        submitBtn.classList.remove("aloading");
+        if (data.status === "success") {
+          form.reset();
+          submitBtn.disabled = true;
+
+          if (messageSuccess) {
+            messageSuccess.style.display = "block";
+
+            setTimeout(() => {
+              messageSuccess.style.display = "none";
+            }, 10000);
+          }
+        }
+      })
+      .catch(() => {
+        submitBtn.classList.remove("aloading");
+      });
+  });
+}
+
+// Paste this code into your Google Apps Script project
+// and replace "GOOGLE_SHEET_ID" with your actual Google Sheet ID
+// Example link: ?utm_source=facebook&utm_medium=cpc
+
+// function doPost(e) {
+//   const sheet =
+//     SpreadsheetApp.openById("GOOGLE_SHEET_ID").getSheetByName("Sheet1");
+
+//   const d = e.parameter;
+
+//   sheet.appendRow([
+//     new Date(),
+//     d.name || "",
+//     d.phone || "",
+//     d.email || "",
+//     d.utm_source || "N/A",
+//     d.utm_medium || "N/A"
+//   ]);
+
+//   return ContentService.createTextOutput(
+//     JSON.stringify({ status: "success" })
+//   ).setMimeType(ContentService.MimeType.JSON);
+// }
 
 const init = () => {
   gsap.registerPlugin(ScrollTrigger);

@@ -15,6 +15,7 @@
     #aabffe 145.1%
   );
   padding: 80px 0 120px;
+  position: relative;
 
   h2 {
     color: #fbfb79;
@@ -26,11 +27,18 @@
   .form-wrapper {
     margin: 0 auto;
     width: max-content;
+    max-width: 600px;
   }
 
   .field-item {
     margin-bottom: 24px;
     width: 600px;
+
+    &.error {
+      label {
+        color: red;
+      }
+    }
 
     label {
       font-size: 16px;
@@ -45,7 +53,7 @@
       height: 48px;
       font-size: 16px;
       border: none;
-      color: #01299c;
+      color: #000;
       outline: unset;
       background-color: #fff;
       border-radius: 20px;
@@ -89,6 +97,7 @@
         align-items: center;
         gap: 8px;
         cursor: pointer;
+        width: max-content;
       }
 
       input {
@@ -124,6 +133,11 @@
     }
   }
 
+  .message-success {
+    font-family: "Archivo", sans-serif;
+    color: #fbfb79;
+  }
+
   button {
     margin: 32px auto 0;
     display: flex;
@@ -139,6 +153,50 @@
     font-size: 18px;
     line-height: 21px;
     padding: 9px 32px;
+
+    &.aloading {
+      pointer-events: none;
+      color: transparent !important;
+      background: linear-gradient(
+        177.27deg,
+        #fbfb79 19.82%,
+        #fdda50 84.84%,
+        #ffa710 137.36%
+      ) !important;
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        z-index: 3;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border: 3px solid transparent;
+        border-radius: 50%;
+        border-top: 3px solid #00299c;
+        border-right: 3px solid #00299c;
+        width: 20px;
+        height: 20px;
+        animation: spin-animation 1s linear infinite;
+        z-index: 2;
+        background: 0 0;
+      }
+
+      @keyframes spin-animation {
+        0% {
+          transform: translate(-50%, -50%) rotate(0);
+        }
+        100% {
+          transform: translate(-50%, -50%) rotate(360deg);
+        }
+      }
+    }
+
+    &:disabled {
+      opacity: 0.7;
+      pointer-events: none;
+    }
 
     &:hover {
       &::before {
@@ -163,5 +221,19 @@
       transition: opacity 0.5s ease;
       z-index: -1;
     }
+  }
+
+  .art-form-left {
+    width: 400px;
+    position: absolute;
+    left: 0;
+    bottom: 100px;
+  }
+
+  .art-form-right {
+    width: 250px;
+    position: absolute;
+    right: 5%;
+    bottom: 150px;
   }
 }
