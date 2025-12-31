@@ -1,0 +1,28 @@
+.footer {
+  &-container {
+    padding: 100px 0;
+  }
+  &-wrapper {
+    display: grid;
+    grid-template-columns: 3fr 5fr 2fr;
+  }
+  &-title {
+    font-size: 15px;
+    line-height: 1;
+    font-weight: 700;
+    color: #2b190f;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+  }
+  &-main {
+    &-col {
+      &.follow-us {
+        ul {
+          display: flex;
+          align-items: center;
+          gap: 18px;
+        }
+      }
+    }
+  }
+}

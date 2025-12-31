@@ -1,5 +1,6 @@
 :root {
   --font-phudu: "Phudu", sans-serif;
+  --font-archivo: "Archivo", sans-serif;
   --color-white: #fff;
 }
 
@@ -199,6 +200,29 @@ body {
   background-color: #fbfb79;
 }
 
+.btn-general {
+  font-size: 24px;
+  line-height: 27px;
+  font-weight: 900;
+  color: #4d67ff;
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 48px;
+}
+
+.back-to-top {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: #2b190f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.back-to-top:hover {
+  cursor: pointer;
+}
+
 #header {
   position: fixed;
   top: 0;
@@ -243,4 +267,55 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+.hero-button {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 50px;
+}
+.hero-button a {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(177.27deg, #fbfb79 19.82%, #fdda50 84.84%, #ffa710 137.36%);
+  z-index: 1;
+}
+.hero-button a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(177.27deg, #fbfb79 19.82%, #fdda50 84.84%, #ffa710 137.36%);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  z-index: -1;
+}
+.hero-button a:hover {
+  color: #4d67ff;
+}
+.hero-button a:hover::before {
+  opacity: 1;
+}
+
+.footer-container {
+  padding: 100px 0;
+}
+.footer-wrapper {
+  display: grid;
+  grid-template-columns: 3fr 5fr 2fr;
+}
+.footer-title {
+  font-size: 15px;
+  line-height: 1;
+  font-weight: 700;
+  color: #2b190f;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+.footer-main-col.follow-us ul {
+  display: flex;
+  align-items: center;
+  gap: 18px;
 }
