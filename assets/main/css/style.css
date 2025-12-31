@@ -2,6 +2,84 @@
   --font-phudu: "Phudu", sans-serif;
 }
 
+.font-phudu {
+  font-family: var(--font-phudu);
+}
+
+.h-115 {
+  font-size: 115px;
+  line-height: 140px;
+}
+
+.h-100 {
+  font-size: 100px;
+  line-height: 1;
+}
+
+.h-3 {
+  font-size: 50px;
+  line-height: 60px;
+}
+
+.h-2 {
+  font-size: 40px;
+  line-height: 50px;
+}
+
+.h-1 {
+  font-size: 30px;
+  line-height: 40px;
+}
+
+.h-0 {
+  font-size: 26px;
+  line-height: 30px;
+}
+
+.b-2 {
+  font-size: 17px;
+  line-height: 26px;
+}
+
+.b-1 {
+  font-size: 16px;
+  line-height: 26px;
+}
+
+.btn-text {
+  font-size: 15px;
+  line-height: 25px;
+}
+
+.b-0 {
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.fw-black {
+  font-weight: 900;
+}
+
+.fw-bold {
+  font-weight: bold;
+}
+
+.fw-medium {
+  font-weight: 500;
+}
+
+.fw-regular {
+  font-weight: 400;
+}
+
+.fw-light {
+  font-weight: 300;
+}
+
+.fw-semibold {
+  font-weight: 600;
+}
+
 *,
 *:before,
 *:after {
