@@ -1,0 +1,27 @@
+.music {
+  &-slider {
+    max-width: calc(calc(9 / 12 * 100%));
+    margin: 0 auto;
+  }
+  .swiper-slide {
+    height: 530px;
+    &.swiper-slide-active {
+      .music-song {
+        transform: scale(1);
+      }
+    }
+    .music-song {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      border-radius: 20px;
+      transform: scale(0.85);
+      transition: transform 0.3s;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}

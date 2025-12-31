@@ -1,6 +1,10 @@
+#footer {
+  background-color: #fbfb79;
+}
 .footer {
   &-container {
     padding: 100px 0;
+
     .footer-back-top {
       display: flex;
       justify-content: flex-end;
@@ -31,12 +35,22 @@
           display: flex;
           align-items: center;
           gap: 18px;
+          li {
+            &:first-child {
+              width: auto;
+            }
+          }
         }
       }
       ul {
         display: flex;
         flex-wrap: wrap;
         gap: 12px;
+        li {
+          &:first-child {
+            width: 100%;
+          }
+        }
       }
     }
   }
