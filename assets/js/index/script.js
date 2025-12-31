@@ -11,9 +11,14 @@ gsap.ticker.add((time) => {
 
 gsap.ticker.lagSmoothing(0);
 
+function formRegister() {
+  if ($("#form-register").length < 1) return;
+}
+
 const init = () => {
   gsap.registerPlugin(ScrollTrigger);
   scrollToTop();
+  formRegister();
 };
 preloadImages("img").then(() => {
   init();

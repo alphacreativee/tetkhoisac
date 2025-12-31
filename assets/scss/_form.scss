@@ -1,6 +1,20 @@
 .form {
-  background-color: #01299c;
-  padding: 80px 0 100px;
+  background: linear-gradient(
+    180deg,
+    #00299c 25.79%,
+    #062c9c 36.39%,
+    #18349d 49.65%,
+    #36429e 65.56%,
+    #6056a0 82.79%,
+    #7460a2 90.75%,
+    #fbfb79 96.05%,
+    #f7f87f 102.68%,
+    #ebef91 111.96%,
+    #d9e2af 122.56%,
+    #c0cfd9 135.82%,
+    #aabffe 145.1%
+  );
+  padding: 80px 0 120px;
 
   h2 {
     color: #fbfb79;
@@ -42,6 +56,30 @@
     }
 
     &.field-accept {
+      a {
+        transition: all 0.4s ease;
+        position: relative;
+
+        &::before {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 1px;
+          background-color: #fbfb79;
+          bottom: -2px;
+          left: 0;
+          transform: scaleX(1);
+          transform-origin: bottom left;
+          transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        &:hover {
+          &::before {
+            transform: scaleX(0);
+            transform-origin: bottom right;
+          }
+        }
+      }
       label {
         text-transform: none;
         font-family: "Archivo", sans-serif;
