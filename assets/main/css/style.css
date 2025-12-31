@@ -1,3 +1,7 @@
+:root {
+  --font-phudu: "Phudu", sans-serif;
+}
+
 *,
 *:before,
 *:after {
@@ -102,4 +106,5 @@ body {
   text-rendering: optimizeLegibility !important;
   -webkit-font-smoothing: auto !important;
   -moz-osx-font-smoothing: grayscale !important;
+  font-family: var(--font-phudu);
 }

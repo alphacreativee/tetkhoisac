@@ -1,0 +1,91 @@
+@font-face {
+    font-family: 'Phudu';
+    src: url('Phudu-Black.eot');
+    src: url('Phudu-Black.eot?#iefix') format('embedded-opentype'),
+        url('Phudu-Black.woff2') format('woff2'),
+        url('Phudu-Black.woff') format('woff'),
+        url('Phudu-Black.ttf') format('truetype'),
+        url('Phudu-Black.svg#Phudu-Black') format('svg');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Phudu';
+    src: url('Phudu-ExtraBold.eot');
+    src: url('Phudu-ExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('Phudu-ExtraBold.woff2') format('woff2'),
+        url('Phudu-ExtraBold.woff') format('woff'),
+        url('Phudu-ExtraBold.ttf') format('truetype'),
+        url('Phudu-ExtraBold.svg#Phudu-ExtraBold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Phudu';
+    src: url('Phudu-Bold.eot');
+    src: url('Phudu-Bold.eot?#iefix') format('embedded-opentype'),
+        url('Phudu-Bold.woff2') format('woff2'),
+        url('Phudu-Bold.woff') format('woff'),
+        url('Phudu-Bold.ttf') format('truetype'),
+        url('Phudu-Bold.svg#Phudu-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Phudu';
+    src: url('Phudu-Medium.eot');
+    src: url('Phudu-Medium.eot?#iefix') format('embedded-opentype'),
+        url('Phudu-Medium.woff2') format('woff2'),
+        url('Phudu-Medium.woff') format('woff'),
+        url('Phudu-Medium.ttf') format('truetype'),
+        url('Phudu-Medium.svg#Phudu-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Phudu';
+    src: url('Phudu-Regular.eot');
+    src: url('Phudu-Regular.eot?#iefix') format('embedded-opentype'),
+        url('Phudu-Regular.woff2') format('woff2'),
+        url('Phudu-Regular.woff') format('woff'),
+        url('Phudu-Regular.ttf') format('truetype'),
+        url('Phudu-Regular.svg#Phudu-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Phudu';
+    src: url('Phudu-Light.eot');
+    src: url('Phudu-Light.eot?#iefix') format('embedded-opentype'),
+        url('Phudu-Light.woff2') format('woff2'),
+        url('Phudu-Light.woff') format('woff'),
+        url('Phudu-Light.ttf') format('truetype'),
+        url('Phudu-Light.svg#Phudu-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Phudu';
+    src: url('Phudu-SemiBold.eot');
+    src: url('Phudu-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('Phudu-SemiBold.woff2') format('woff2'),
+        url('Phudu-SemiBold.woff') format('woff'),
+        url('Phudu-SemiBold.ttf') format('truetype'),
+        url('Phudu-SemiBold.svg#Phudu-SemiBold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
