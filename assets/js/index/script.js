@@ -1,6 +1,5 @@
 import { preloadImages } from "../../libs/utils.js";
 import {
-  scrollToTop,
   swiperSong,
   swiperTickets,
   scrollToSection,
@@ -120,7 +119,7 @@ function formRegister() {
 
 const init = () => {
   gsap.registerPlugin(ScrollTrigger);
-  scrollToTop();
+
   formRegister();
   swiperSong();
   swiperTickets();

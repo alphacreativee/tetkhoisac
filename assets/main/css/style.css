@@ -1,6 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Mona+Sans:ital,wght@0,200..900;1,200..900&display=swap");
 :root {
   --font-phudu: "Phudu", sans-serif;
   --font-archivo: "Archivo", sans-serif;
+  --font-mono-sans: "Mona Sans", sans-serif;
   --color-white: #fff;
 }
 
@@ -551,22 +553,51 @@ body {
   display: flex;
   justify-content: flex-end;
 }
+.footer-container .footer-location-title {
+  font-size: 21px;
+  line-height: 120%;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: var(--font-mono-sans);
+  max-width: 85%;
+  margin-bottom: 18px;
+}
+.footer-container .info-contact {
+  margin-bottom: 12px;
+}
+.footer-container .info-contact li a {
+  font-family: var(--font-mono-sans);
+  font-size: 15px;
+  line-height: 120%;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.footer-container .social {
+  display: flex;
+  gap: 10px;
+}
 .footer-wrapper {
   display: grid;
-  grid-template-columns: 3fr 5fr 2fr;
+  grid-template-columns: 4fr 2fr 4fr;
   gap: 12px;
 }
+.footer-wrapper.footer-top {
+  margin-bottom: 95px;
+}
 .footer-title {
-  font-size: 15px;
+  font-family: var(--font-mono-sans);
+  font-size: 10px;
   line-height: 1;
   font-weight: 700;
   color: #2b190f;
   text-transform: uppercase;
   margin-bottom: 24px;
+  text-align: center;
 }
 .footer-main {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1.1fr 1.1fr 0.9fr 0.9fr;
+  gap: 24px;
 }
 @media (min-width: 992px) {
   .footer-main-col.follow-us {
