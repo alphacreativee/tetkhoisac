@@ -5,26 +5,52 @@ export function scrollToTop() {
 }
 export function swiperSong() {
   if (!document.querySelector(".swiper-music")) return;
-  var swiper = new Swiper(".swiper-music", {
+  var musicSwiper = new Swiper(".swiper-music", {
     slidesPerView: 1,
     spaceBetween: 20,
     centeredSlides: true,
     loop: true,
+    speed: 300,
+
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+      pauseOnMouseEnter: false
+    },
+
     breakpoints: {
       992: {
         slidesPerView: 3,
         spaceBetween: -10
       }
     },
+
     pagination: {
       el: ".swiper-pagination",
       clickable: true
     },
+
     navigation: {
       nextEl: ".music-slider .swiper-button-next",
       prevEl: ".music-slider .swiper-button-prev"
+    },
+
+    on: {
+      init() {
+        handleAutoplay(this);
+      },
+      resize() {
+        handleAutoplay(this);
+      }
     }
   });
+}
+export function handleAutoplay(musicSwiper) {
+  if (window.innerWidth >= 992) {
+    musicSwiper.autoplay.stop();
+  } else {
+    musicSwiper.autoplay.start();
+  }
 }
 export function swiperTickets() {
   if (!document.querySelector(".swiper-tickets")) return;
