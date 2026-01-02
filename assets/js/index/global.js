@@ -10,7 +10,7 @@ export function swiperSong() {
     spaceBetween: 20,
     centeredSlides: true,
     loop: true,
-    speed: 300,
+    speed: 600,
 
     autoplay: {
       delay: 3000,
