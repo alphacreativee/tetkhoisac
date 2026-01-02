@@ -16,23 +16,46 @@
   );
   padding: 80px 0 120px;
   position: relative;
+  overflow: hidden;
+
+  @media (max-width: 767px) {
+    padding: 24px 0 130px;
+  }
 
   h2 {
     color: #fbfb79;
     margin-bottom: 60px;
     font-weight: 500;
     font-size: 98px;
+    position: relative;
+    z-index: 2;
+
+    @media (max-width: 767px) {
+      font-size: 50px;
+      margin-bottom: 30px;
+    }
   }
 
   .form-wrapper {
     margin: 0 auto;
     width: max-content;
     max-width: 600px;
+    position: relative;
+    z-index: 2;
+
+    @media (max-width: 767px) {
+      max-width: 300px;
+    }
   }
 
   .field-item {
     margin-bottom: 24px;
     width: 600px;
+
+    @media (max-width: 767px) {
+      width: 300px;
+      margin-bottom: 8px;
+    }
 
     &.error {
       label {
@@ -47,6 +70,11 @@
       color: #fbfb79;
       display: block;
       margin-bottom: 8px;
+
+      @media (max-width: 767px) {
+        font-size: 8px;
+        margin-bottom: 4px;
+      }
     }
 
     input {
@@ -61,6 +89,12 @@
       font-family: "Archivo", sans-serif;
       font-weight: bold;
       padding: 12px 24px;
+
+      @media (max-width: 767px) {
+        height: 25px;
+        padding: 4px 16px;
+        font-size: 8px;
+      }
     }
 
     .phone-desc {
@@ -68,6 +102,11 @@
       font-size: 11px;
       color: #e2e2e2;
       margin-top: 8px;
+
+      @media (max-width: 767px) {
+        margin-top: 4px;
+        font-size: 6px;
+      }
     }
 
     &.field-accept {
@@ -121,6 +160,11 @@
         transition: all 0.2s ease;
         padding: 0;
 
+        @media (max-width: 767px) {
+          width: 10px;
+          height: 10px;
+        }
+
         &::after {
           content: "";
           position: absolute;
@@ -132,6 +176,11 @@
           background: #fff;
           border-radius: 50%;
           pointer-events: none;
+
+          @media (max-width: 767px) {
+            width: 6px;
+            height: 6px;
+          }
         }
 
         &:checked::after {
@@ -162,6 +211,14 @@
     line-height: 21px;
     padding: 9px 32px;
 
+    @media (max-width: 767px) {
+      margin-top: 16px;
+      padding: 5px 18px;
+      border-radius: 20px;
+      font-size: 10px;
+      line-height: 100%;
+    }
+
     &.aloading {
       pointer-events: none;
       color: transparent !important;
@@ -189,6 +246,11 @@
         animation: spin-animation 1s linear infinite;
         z-index: 2;
         background: 0 0;
+
+        @media (max-width: 767px) {
+          width: 12px;
+          height: 12px;
+        }
       }
 
       @keyframes spin-animation {
@@ -236,6 +298,10 @@
     position: absolute;
     left: 0;
     bottom: 100px;
+
+    @media (max-width: 991px) {
+      display: none;
+    }
   }
 
   .art-form-right {
@@ -243,5 +309,23 @@
     position: absolute;
     right: 5%;
     bottom: 150px;
+
+    @media (max-width: 767px) {
+      opacity: 0.6 !important;
+      bottom: 100px;
+      width: 140px;
+      right: -10%;
+    }
+  }
+
+  .icon-mobile {
+    display: none;
+
+    @media (max-width: 767px) {
+      display: block;
+      width: 150px;
+      height: auto;
+      margin: 0 auto;
+    }
   }
 }
