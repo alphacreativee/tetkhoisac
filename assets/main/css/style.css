@@ -1245,6 +1245,11 @@ body {
   color: #fff;
   padding: 200px 24px 120px;
 }
+@media (max-width: 767px) {
+  .term {
+    padding: 150px 24px;
+  }
+}
 .term::after {
   content: "";
   position: absolute;

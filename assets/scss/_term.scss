@@ -4,6 +4,10 @@
   color: #fff;
   padding: 200px 24px 120px;
 
+  @media (max-width: 767px) {
+    padding: 150px 24px;
+  }
+
   &::after {
     content: "";
     position: absolute;
