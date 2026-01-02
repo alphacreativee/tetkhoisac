@@ -1,7 +1,17 @@
 .music {
+  padding-bottom: 130px;
   &-slider {
     max-width: calc(calc(9 / 12 * 100%));
     margin: 0 auto;
+    position: relative;
+    .swiper-button-prev {
+      left: 0;
+      margin-left: -100px;
+    }
+    .swiper-button-next {
+      right: 0;
+      margin-right: -100px;
+    }
   }
   .swiper-slide {
     height: 530px;

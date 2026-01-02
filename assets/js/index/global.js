@@ -14,6 +14,10 @@ export function swiperSong() {
       el: ".swiper-pagination",
       clickable: true,
     },
+    navigation: {
+      nextEl: ".music-slider .swiper-button-next",
+      prevEl: ".music-slider .swiper-button-prev",
+    },
   });
 }
 export function swiperTickets() {
@@ -26,5 +30,90 @@ export function swiperTickets() {
       el: ".swiper-pagination",
       clickable: true,
     },
+  });
+}
+export function scrollToSection() {
+  gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
+
+  const menuLinks = document.querySelectorAll(".header-menu a");
+  const sections = document.querySelectorAll("section[id]");
+
+  menuLinks.forEach((link) => {
+    link.addEventListener("click", function (e) {
+      e.preventDefault();
+
+      menuLinks.forEach((item) => item.classList.remove("active"));
+      this.classList.add("active");
+
+      const targetId = this.getAttribute("href");
+
+      gsap.to(window, {
+        duration: 0.5,
+        scrollTo: {
+          y: targetId,
+          offsetY: 0,
+        },
+        ease: "none",
+      });
+    });
+  });
+
+  sections.forEach((section) => {
+    ScrollTrigger.create({
+      trigger: section,
+      start: "top center",
+      end: "bottom center",
+      onEnter: () => updateActiveLink(section.id),
+      onEnterBack: () => updateActiveLink(section.id),
+      onLeave: () => {},
+      onLeaveBack: () => {
+        if (section === sections[0]) {
+          menuLinks.forEach((link) => link.classList.remove("active"));
+        }
+      },
+    });
+  });
+
+  function updateActiveLink(sectionId) {
+    menuLinks.forEach((link) => link.classList.remove("active"));
+    const activeLink = document.querySelector(
+      `.header-menu a[href="#${sectionId}"]`
+    );
+    if (activeLink) activeLink.classList.add("active");
+  }
+}
+export function animation() {
+  gsap.utils.toArray("[data-fade-in]").forEach((element) => {
+    const direction = element.getAttribute("data-parallax-direction") || "up";
+    const distance = element.getAttribute("data-parallax-distance") || 50;
+
+    gsap.fromTo(
+      element,
+      {
+        opacity: 0,
+        y: 20,
+      },
+      {
+        scrollTrigger: {
+          trigger: element,
+          start: "top 75%",
+          end: "bottom 75%",
+        },
+        opacity: 1,
+        y: 0,
+        duration: 0.5,
+        ease: "sine.out",
+      }
+    );
+
+    gsap.to(element, {
+      y: direction === "down" ? distance : -distance,
+      scrollTrigger: {
+        trigger: element,
+        start: "top bottom",
+        end: "bottom top",
+        scrub: true,
+      },
+    });
   });
 }

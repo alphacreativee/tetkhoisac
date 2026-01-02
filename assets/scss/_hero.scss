@@ -35,19 +35,14 @@
         left: 0;
         right: 0;
         bottom: 0;
-        background: linear-gradient(
-          177.27deg,
-          #fbfb79 19.82%,
-          #fdda50 84.84%,
-          #ffa710 137.36%
-        );
+        background: #4d67ff;
         opacity: 0;
-        transition: opacity 0.5s ease;
+        transition: opacity 0.3s ease;
         z-index: -1;
       }
 
       &:hover {
-        color: #4d67ff;
+        color: var(--color-white);
         &::before {
           opacity: 1;
         }
