@@ -9,18 +9,29 @@
   transition: color 0.3s ease;
 }
 .back-to-top {
-  width: 70px;
-  height: 70px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
-  background-color: #2b190f;
+  background-color: transparent;
   display: flex;
   justify-content: center;
   align-items: center;
   transition: all 0.3s ease;
-
+  border: 3px solid #4d67ff;
+  svg {
+    path {
+      transition: all 0.3s ease;
+    }
+  }
   &:hover {
-    background-color: #01299c;
+    background-color: #4d67ff;
     cursor: pointer;
+    svg {
+      path {
+        fill: var(--color-white);
+        stroke: var(--color-white);
+      }
+    }
   }
 }
 .custom-arrow {

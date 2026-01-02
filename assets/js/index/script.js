@@ -3,7 +3,8 @@ import {
   swiperSong,
   swiperTickets,
   scrollToSection,
-  animation
+  animation,
+  scrollToTop,
 } from "../../js/index/global.js";
 ("use strict");
 $ = jQuery;
@@ -69,7 +70,7 @@ function formRegister() {
       "https://script.google.com/macros/s/AKfycbzJSGh6G7qgh1TkXOkqoXuNJz0M7inCU5n9aD1pmAaAoBqJmxrrXtT3fvKKcOpoMGia/exec",
       {
         method: "POST",
-        body: formData
+        body: formData,
       }
     )
       .then((res) => res.json())
@@ -141,6 +142,7 @@ const init = () => {
   swiperTickets();
   scrollToSection();
   toggleMobileMenu();
+  scrollToTop();
 };
 preloadImages("img").then(() => {
   init();
