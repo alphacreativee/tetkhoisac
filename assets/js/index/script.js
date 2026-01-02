@@ -3,6 +3,7 @@ import {
   swiperSong,
   swiperTickets,
   scrollToSection,
+  animation,
 } from "../../js/index/global.js";
 ("use strict");
 $ = jQuery;
@@ -119,7 +120,7 @@ function formRegister() {
 
 const init = () => {
   gsap.registerPlugin(ScrollTrigger);
-
+  animation();
   formRegister();
   swiperSong();
   swiperTickets();

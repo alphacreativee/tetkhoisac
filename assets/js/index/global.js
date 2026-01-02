@@ -38,7 +38,6 @@ export function scrollToSection() {
   const menuLinks = document.querySelectorAll(".header-menu a");
   const sections = document.querySelectorAll("section[id]");
 
-  // Click để scroll
   menuLinks.forEach((link) => {
     link.addEventListener("click", function (e) {
       e.preventDefault();
@@ -59,7 +58,6 @@ export function scrollToSection() {
     });
   });
 
-  // Tự động active khi scroll
   sections.forEach((section) => {
     ScrollTrigger.create({
       trigger: section,
@@ -67,6 +65,12 @@ export function scrollToSection() {
       end: "bottom center",
       onEnter: () => updateActiveLink(section.id),
       onEnterBack: () => updateActiveLink(section.id),
+      onLeave: () => {},
+      onLeaveBack: () => {
+        if (section === sections[0]) {
+          menuLinks.forEach((link) => link.classList.remove("active"));
+        }
+      },
     });
   });
 
@@ -77,4 +81,39 @@ export function scrollToSection() {
     );
     if (activeLink) activeLink.classList.add("active");
   }
+}
+export function animation() {
+  gsap.utils.toArray("[data-fade-in]").forEach((element) => {
+    const direction = element.getAttribute("data-parallax-direction") || "up";
+    const distance = element.getAttribute("data-parallax-distance") || 50;
+
+    gsap.fromTo(
+      element,
+      {
+        opacity: 0,
+        y: 20,
+      },
+      {
+        scrollTrigger: {
+          trigger: element,
+          start: "top 75%",
+          end: "bottom 75%",
+        },
+        opacity: 1,
+        y: 0,
+        duration: 0.5,
+        ease: "sine.out",
+      }
+    );
+
+    gsap.to(element, {
+      y: direction === "down" ? distance : -distance,
+      scrollTrigger: {
+        trigger: element,
+        start: "top bottom",
+        end: "bottom top",
+        scrub: true,
+      },
+    });
+  });
 }
