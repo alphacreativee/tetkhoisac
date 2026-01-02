@@ -14,13 +14,23 @@
     max-width: calc(calc(9 / 12 * 100%));
     margin: 0 auto;
     position: relative;
+    @media (max-width: 991px) {
+      max-width: 100%;
+      padding: 0 20px;
+    }
     .swiper-button-prev {
       left: 0;
       margin-left: -100px;
+      @media (max-width: 991px) {
+        display: none;
+      }
     }
     .swiper-button-next {
       right: 0;
       margin-right: -100px;
+      @media (max-width: 991px) {
+        display: none;
+      }
     }
   }
   .swiper-slide {

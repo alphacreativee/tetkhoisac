@@ -15,19 +15,47 @@
       right: 200px;
       top: 0;
       transform: translateY(-25%);
+      @media (max-width: 991px) {
+        right: 10%;
+        img {
+          width: 115px;
+          height: auto;
+        }
+      }
     }
     &.art-2 {
       left: 70px;
       top: 0;
       transform: translateY(-5%);
+      @media (max-width: 991px) {
+        left: 5%;
+        img {
+          width: 125px;
+          height: auto;
+        }
+      }
     }
     &.art-3 {
       left: 50px;
       top: 50%;
+      @media (max-width: 991px) {
+        img {
+          width: 100px;
+          height: auto;
+        }
+      }
     }
     &.art-4 {
       bottom: 100px;
       right: 50px;
+      @media (max-width: 991px) {
+        bottom: 45%;
+        right: 0;
+        img {
+          width: 115px;
+          height: auto;
+        }
+      }
     }
   }
 }

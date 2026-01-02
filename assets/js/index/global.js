@@ -6,10 +6,16 @@ export function scrollToTop() {
 export function swiperSong() {
   if (!document.querySelector(".swiper-music")) return;
   var swiper = new Swiper(".swiper-music", {
-    slidesPerView: 3,
-    spaceBetween: -10,
+    slidesPerView: 1,
+    spaceBetween: 20,
     centeredSlides: true,
     loop: true,
+    breakpoints: {
+      992: {
+        slidesPerView: 3,
+        spaceBetween: -10
+      }
+    },
     pagination: {
       el: ".swiper-pagination",
       clickable: true
@@ -25,18 +31,21 @@ export function swiperTickets() {
   var swiper = new Swiper(".swiper-tickets", {
     slidesPerView: 5,
     spaceBetween: 24,
-
+    slidesOffsetAfter: 0,
     breakpoints: {
       0: {
         slidesPerView: 2.8,
-        spaceBetween: 13
+        spaceBetween: 13,
+        slidesOffsetAfter: 13
       },
       480: {
-        slidesPerView: 3.5
+        slidesPerView: 3.5,
+        slidesOffsetAfter: 13
       },
       992: {
         slidesPerView: 5,
-        spaceBetween: 24
+        spaceBetween: 24,
+        slidesOffsetAfter: 0
       }
     },
 
