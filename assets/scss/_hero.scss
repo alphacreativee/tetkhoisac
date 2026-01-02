@@ -49,6 +49,9 @@
     left: 50%;
     transform: translateX(-50%);
     bottom: 50px;
+    @media (max-width: 991px) {
+      display: none;
+    }
     a {
       position: relative;
       overflow: hidden;
@@ -59,7 +62,9 @@
         #ffa710 137.36%
       );
       z-index: 1;
-
+      @media (max-width: 991px) {
+        white-space: nowrap;
+      }
       &::before {
         content: "";
         position: absolute;
