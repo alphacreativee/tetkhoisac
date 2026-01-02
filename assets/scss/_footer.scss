@@ -42,6 +42,10 @@
           font-weight: 700;
           text-transform: uppercase;
           display: inline-block;
+          transition: color 0.3s ease;
+          &:hover {
+            color: #00299c;
+          }
           @media (max-width: 991px) {
             font-size: 7px;
             height: 100%;
@@ -53,6 +57,22 @@
     .social {
       display: flex;
       gap: 10px;
+      li {
+        a {
+          svg {
+            path {
+              transition: all 0.3s ease;
+            }
+          }
+          &:hover {
+            svg {
+              path {
+                fill: #00299c;
+              }
+            }
+          }
+        }
+      }
       @media (max-width: 991px) {
         li {
           a {
