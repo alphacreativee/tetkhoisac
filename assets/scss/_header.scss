@@ -11,6 +11,11 @@
   }
 }
 .header {
+  &-container {
+    @media (max-width: 991px) {
+      padding: 0 24px;
+    }
+  }
   &-main {
     padding-top: 40px;
   }
