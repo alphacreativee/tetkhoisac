@@ -4,7 +4,7 @@ import {
   swiperTickets,
   scrollToSection,
   animation,
-  scrollToTop,
+  scrollToTop
 } from "../../js/index/global.js";
 ("use strict");
 $ = jQuery;
@@ -70,7 +70,7 @@ function formRegister() {
       "https://script.google.com/macros/s/AKfycbzJSGh6G7qgh1TkXOkqoXuNJz0M7inCU5n9aD1pmAaAoBqJmxrrXtT3fvKKcOpoMGia/exec",
       {
         method: "POST",
-        body: formData,
+        body: formData
       }
     )
       .then((res) => res.json())
@@ -131,6 +131,16 @@ function toggleMobileMenu() {
     this.classList.toggle("active");
     menu.classList.toggle("active");
     body.classList.toggle("overflow-hidden");
+
+    if (isActive) {
+      if (window.lenis) {
+        lenis.stop();
+      }
+    } else {
+      if (window.lenis) {
+        lenis.start();
+      }
+    }
   });
 }
 
