@@ -113,6 +113,10 @@
     text-transform: uppercase;
     margin-bottom: 24px;
     text-align: center;
+
+    @media (max-width: 767px) {
+      text-align: left;
+    }
   }
   &-main {
     display: grid;

@@ -299,7 +299,7 @@ body {
   width: 170px;
   height: 140px;
   position: fixed;
-  z-index: 999;
+  z-index: 99;
   right: 80px;
   bottom: 80px;
 }
@@ -947,6 +947,11 @@ body {
   text-transform: uppercase;
   margin-bottom: 24px;
   text-align: center;
+}
+@media (max-width: 767px) {
+  .footer-title {
+    text-align: left;
+  }
 }
 .footer-main {
   display: grid;
