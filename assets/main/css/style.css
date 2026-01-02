@@ -865,7 +865,7 @@ body {
 @media (max-width: 991px) {
   .footer-container {
     max-width: 100%;
-    padding: 80px 20px;
+    padding: 60px 20px 80px;
   }
 }
 .footer-container .footer-location-title {
@@ -1106,6 +1106,11 @@ body {
   position: relative;
   z-index: 3;
 }
+@media (max-width: 991px) {
+  .music {
+    padding-bottom: 50px;
+  }
+}
 .music-wrapper {
   border-radius: 30px 30px 0 0;
   transform: translateY(-30px);
@@ -1183,6 +1188,11 @@ body {
   transform: translateY(-30px);
   background-color: #01299c;
   padding-bottom: 70px;
+}
+@media (max-width: 767px) {
+  .tickets-main {
+    padding-bottom: 6px;
+  }
 }
 .tickets-cards {
   padding-bottom: 130px;
