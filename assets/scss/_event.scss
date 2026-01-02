@@ -2,11 +2,21 @@
   position: relative;
   width: 100%;
   z-index: 1;
+  @media (max-width: 991px) {
+    background-color: #fbfb79;
+    padding-top: 130px;
+  }
   &-top {
     position: absolute;
     z-index: 2;
     left: 50%;
     transform: translateX(-50%);
     top: 50px;
+    @media (max-width: 991px) {
+      img {
+        width: 146px;
+        height: auto;
+      }
+    }
   }
 }
