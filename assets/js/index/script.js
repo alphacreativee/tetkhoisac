@@ -126,7 +126,7 @@ function toggleMobileMenu() {
   const body = document.querySelector("body");
 
   hambuger.addEventListener("click", function () {
-    console.log("click");
+    const isActive = this.classList.toggle("active");
 
     this.classList.toggle("active");
     menu.classList.toggle("active");
