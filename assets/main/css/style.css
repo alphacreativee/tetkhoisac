@@ -459,7 +459,7 @@ body {
 .hero {
   position: relative;
   width: 100%;
-  height: 100svh;
+  height: calc(100svh + 30px);
   overflow: hidden;
   z-index: 1;
 }
@@ -547,7 +547,6 @@ body {
 @media (max-width: 767px) {
   .form {
     padding: 24px 0 130px;
-    border-radius: 0 0 20px 20px;
   }
 }
 .form h2 {
@@ -826,12 +825,6 @@ body {
 #footer {
   background-color: #fbfb79;
 }
-@media (max-width: 991px) {
-  #footer {
-    border-radius: 20px 20px 0 0;
-  }
-}
-
 .footer-container {
   padding: 100px 0;
 }
