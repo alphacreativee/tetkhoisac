@@ -22,6 +22,8 @@
 
     @media (max-width: 991px) {
       padding-bottom: 64px;
+      max-width: 100%;
+      padding-left: 24px;
     }
 
     .title {
@@ -34,6 +36,10 @@
       font-weight: 500;
       line-height: 120%;
       letter-spacing: -0.35px;
+
+      @media (max-width: 991px) {
+        padding-right: 24px;
+      }
 
       @media (max-width: 767px) {
         margin-bottom: 36px;

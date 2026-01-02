@@ -282,6 +282,28 @@ body {
   opacity: 1;
 }
 
+#cta-tickets {
+  width: 170px;
+  height: 140px;
+  position: fixed;
+  z-index: 999;
+  right: 80px;
+  bottom: 80px;
+}
+@media (max-width: 991px) {
+  #cta-tickets {
+    width: 96px;
+    height: 80px;
+    right: 24px;
+    bottom: 70px;
+  }
+}
+#cta-tickets img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
 #header {
   position: fixed;
   top: 0;
@@ -732,7 +754,7 @@ body {
   width: 250px;
   position: absolute;
   right: 5%;
-  bottom: 150px;
+  bottom: 35%;
 }
 @media (max-width: 767px) {
   .form .art-form-right {
@@ -1022,6 +1044,8 @@ body {
 @media (max-width: 991px) {
   .tickets-cards {
     padding-bottom: 64px;
+    max-width: 100%;
+    padding-left: 24px;
   }
 }
 .tickets-cards .title {
@@ -1034,6 +1058,11 @@ body {
   font-weight: 500;
   line-height: 120%;
   letter-spacing: -0.35px;
+}
+@media (max-width: 991px) {
+  .tickets-cards .title {
+    padding-right: 24px;
+  }
 }
 @media (max-width: 767px) {
   .tickets-cards .title {

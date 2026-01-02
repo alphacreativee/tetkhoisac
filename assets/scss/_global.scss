@@ -85,3 +85,25 @@
     }
   }
 }
+
+#cta-tickets {
+  width: 170px;
+  height: 140px;
+  position: fixed;
+  z-index: 999;
+  right: 80px;
+  bottom: 80px;
+
+  @media (max-width: 991px) {
+    width: 96px;
+    height: 80px;
+    right: 24px;
+    bottom: 70px;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
