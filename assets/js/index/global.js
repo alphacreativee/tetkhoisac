@@ -26,6 +26,20 @@ export function swiperTickets() {
     slidesPerView: 5,
     spaceBetween: 24,
 
+    breakpoints: {
+      0: {
+        slidesPerView: 2.8,
+        spaceBetween: 13,
+      },
+      480: {
+        slidesPerView: 3.5,
+      },
+      992: {
+        slidesPerView: 5,
+        spaceBetween: 24,
+      },
+    },
+
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
