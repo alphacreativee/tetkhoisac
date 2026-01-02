@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <!-- import favicon -->
+    <link rel="icon" href="./assets/images/favicon.png" type="image/x-icon" />
+    <!-- meta -->
+    <meta property="og:url" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:image" content="" />
+    <!-- meta -->
+    <link rel="stylesheet" href="./assets/libs/bootstrap.min.css" />
+    <link rel="stylesheet" href="./assets/libs/lenis.css" />
+    <link rel="stylesheet" href="./assets/libs/swiper-bundle.min.css" />
+    <!-- end meta -->
+    <!-- link custom css page -->
+    <link rel="stylesheet" href="./assets/fonts/phudu/stylesheet.css" />
+    <link rel="stylesheet" href="./assets/fonts/archivo/stylesheet.css" />
+    <link rel="stylesheet" href="./assets/main/css/style.min.css" />
+    <!-- end link custom css page -->
+    <!-- scrollRestoration -->
+    <script>
+      if ("scrollRestoration" in history) {
+        history.scrollRestoration = "manual";
+      }
+    </script>
+  </head>
+  <body>
+    <!-- layout -->
+    <!-- header -->
+    <script>
+      fetch("./components/header.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("header").innerHTML = data;
+          const currentPath = window.location.pathname || "/";
+
+          const navLinks = document.querySelectorAll(".header-menu ul>li>a");
+          navLinks.forEach((link) => {
+            const linkPath = link.getAttribute("href");
+
+            // Normalize paths for comparison
+            let normalizedCurrentPath = currentPath;
+            let normalizedLinkPath = linkPath;
+
+            // Remove leading "./" from link path
+            if (normalizedLinkPath.startsWith("./")) {
+              normalizedLinkPath = normalizedLinkPath.substring(1);
+            }
+
+            // Get the last segment of the path
+            const currentSegment = normalizedCurrentPath.split("/").pop() || "";
+            const linkSegment = normalizedLinkPath.split("/").pop() || "";
+
+            // Check if current path is root or ends with /
+            const isRootPath =
+              currentPath === "/" ||
+              currentPath.endsWith("/") ||
+              currentSegment === "";
+
+            // Check if link is home/index
+            const isHomeLink =
+              linkPath === "/" ||
+              linkPath === "./" ||
+              linkPath === "./index.html" ||
+              linkPath === "index.html" ||
+              linkSegment === "index.html";
+
+            // Match logic
+            const isMatch =
+              normalizedLinkPath === normalizedCurrentPath || // Exact match
+              currentSegment === linkSegment || // Segment match
+              (isRootPath && isHomeLink) || // Root path matches home link
+              (currentPath.endsWith(normalizedLinkPath) &&
+                normalizedLinkPath !== "/");
+
+            if (isMatch) {
+              link.classList.add("active");
+            }
+          });
+        });
+    </script>
+    <header id="header"></header>
+    <!-- end header -->
+    <main>
+      <section class="term">
+        <div class="term-wrapper">
+          <h1 class="title text-center">Điều khoản</h1>
+          <div class="content">
+            <h2>I. QUY ĐỊNH CHUNG</h2>
+            <ul>
+              <li>
+                Khi mua vé tham dự sự kiện, bạn đã chấp nhận các Điều khoản và
+                Điều kiện cũng như Quy định tham gia sự kiện được công bố trên
+                trang web chính thức.
+              </li>
+              <li>Mỗi vé chỉ áp dụng cho một Khách Tham Dự.</li>
+              <li>
+                Ban Tổ Chức (BTC) không chịu trách nhiệm nếu mã QR code trên vé
+                bị lộ (vé online) hoặc mất vé (vé in ấn).
+              </li>
+              <li>
+                Trẻ em dưới 1.2m không cần vé tham gia sự kiện nhưng phải đi
+                cùng với người giám hộ.
+              </li>
+              <li>
+                Phụ nữ mang thai, người có vấn đề về sức khỏe cần cân nhắc khi
+                tham gia và chịu trách nhiệm về quyết định của mình.
+              </li>
+              <li>
+                BTC có quyền kiểm tra tư trang tại cổng sự kiện để đảm bảo an
+                toàn. Vui lòng không mang theo các vật dụng bị cấm như vũ khí,
+                vật nhọn, chất cháy nổ, hoặc thiết bị ghi hình chuyên nghiệp.
+              </li>
+              <li>
+                BTC không chịu trách nhiệm đối với tài sản bị mất, đánh cắp,
+                hoặc hư hỏng trong sự kiện.
+              </li>
+            </ul>
+            <h2>II. QUY ĐỊNH VỀ VÉ VÀ CHECK-IN</h2>
+            <ul>
+              <li>
+                Vé không được hoàn trả hoặc đổi dưới bất kỳ hình thức nào.
+              </li>
+              <li>
+                Vé sự kiện là vé điện tử (QR code) đối với vé thường và vé in ấn
+                đối với vé VIP, chỉ sử dụng được một lần quét.
+              </li>
+              <li>
+                Đối với vé VIP, Khách Tham Dự phải xuất trình vé cứng, không
+                chấp nhận hình chụp vé cứng có QR code.
+              </li>
+              <li>
+                Khách Tham Dự cần đổi vé thành vòng tay tại quầy check-in để
+                tham gia sự kiện.
+              </li>
+              <li>
+                Vòng tay thể hiện vị trí ngồi/đứng theo khu vực và chỉ được cấp
+                một lần. Vui lòng đeo vòng tay trong suốt thời gian diễn ra sự
+                kiện.
+              </li>
+              <li>
+                BTC không cấp lại vòng tay trong trường hợp bị mất hoặc hư hỏng.
+              </li>
+              <li>
+                Khách Tham Dự cần kiểm tra kỹ thông tin vé (ngày, giờ, địa điểm)
+                trước khi sự kiện diễn ra.
+              </li>
+            </ul>
+            <h2>III. NỘI QUY KHI THAM GIA SỰ KIỆN</h2>
+            <p>Không mang các vật dụng bị cấm:</p>
+            <ul>
+              <li>Đồ ăn, thức uống từ bên ngoài.</li>
+              <li>
+                Chai thủy tinh, chai nhựa, chai nhôm, lọ thiếc hoặc các vật chứa
+                bằng nhựa cứng.
+              </li>
+              <li>
+                Vũ khí, vật nhọn, chất cháy nổ, gậy selfie, ô dù, máy ảnh chuyên
+                nghiệp, flycam.
+              </li>
+              <li>Động vật hoặc thú cưng.</li>
+              <li>Áp phích, bảng hiệu mang nội dung không phù hợp.</li>
+              <li>
+                Bất kỳ vật dụng dễ bốc cháy như rượu, nước hoa, chai xịt khử mùi
+                cơ thể, xăng dầu…
+              </li>
+              <li>
+                Bật lửa, nến, pháo bông, pháo sáng và các chất phát nổ, diêm,
+                hộp quẹt.
+              </li>
+              <li>
+                Các chất cấm (chất kích thích), nước uống có cồn, thuốc lá,
+                thuốc lá điện tử.
+              </li>
+            </ul>
+            <p>Hành vi nghiêm cấm:</p>
+            <ul>
+              <li>Không chen lấn, xô đẩy, gây rối trật tự.</li>
+              <li>Không quay phim, livestream các tiết mục biểu diễn.</li>
+              <li>Không gây gổ, xô xát hoặc thực hiện hành vi nguy hiểm.</li>
+            </ul>
+            <h2>IV. QUYỀN HẠN VÀ TRÁCH NHIỆM CỦA BTC</h2>
+            <ul>
+              <li>
+                BTC có quyền từ chối hoặc mời ra khỏi khu vực sự kiện bất kỳ cá
+                nhân nào vi phạm quy định mà không hoàn trả tiền vé.
+              </li>
+              <li>
+                Trong trường hợp bất khả kháng như thời tiết xấu hoặc tình huống
+                khẩn cấp, BTC có thể hoãn, hủy hoặc tạm ngừng sự kiện.
+              </li>
+              <li>
+                Việc tham gia sự kiện đồng nghĩa với việc bạn đồng ý cho phép
+                BTC sử dụng hình ảnh cá nhân trong sự kiện cho mục đích quảng
+                bá.
+              </li>
+              <li>
+                BTC được quyền từ chối Khách Tham Dự check-in trong trường hợp
+                Khách Tham Dự say xỉn, trong trạng thái mất kiểm soát hoặc vi
+                phạm bất kỳ quy định nào trong Quy định tham gia Chương trình.
+              </li>
+              <li>
+                Ban Tổ Chức có quyền điều chỉnh, bổ sung nội dung Quy định tham
+                gia chương trình, Điều Kiện và Điều Khoản nếu xét thấy cần
+                thiết, đảm bảo không trái với nội dung mà Khách Tham Dự đã đọc
+                và đồng ý. Khi mua vé, Khách Tham Dự được hiểu là đã đọc, hiểu
+                và đồng ý với toàn bộ Quy định tham gia, Điều Kiện và Điều Khoản
+                cũng như các thay đổi (nếu có).
+              </li>
+              <li>
+                Trong trường hợp có thay đổi liên quan đến Chương trình, BTC sẽ
+                thông báo trên website chính thức và các kênh truyền thông của
+                BTC.
+              </li>
+              <li>
+                Trong mọi trường hợp, quyết định của BTC là quyết định cuối
+                cùng.
+              </li>
+              <li>
+                BTC được miễn trừ mọi trách nhiệm đối với các tai nạn, thương
+                tích xảy ra tại Sự kiện do Người Tham Dự không tuân theo các quy
+                định của BTC.
+              </li>
+              <li>
+                BTC không chịu trách nhiệm đối với các tổn hại về sức khỏe do
+                bệnh lý hoặc chấn thương do Người Tham Dự tự gây ra trong quá
+                trình tham dự.
+              </li>
+              <li>
+                BTC không chịu trách nhiệm về sự an toàn của tài sản cá nhân
+                trong trường hợp xảy ra sự cố bất khả kháng, thời tiết hoặc các
+                yếu tố khách quan ảnh hưởng đến sự kiện.
+              </li>
+              <li>
+                BTC cung cấp dịch vụ tuân thủ theo pháp luật Việt Nam và không
+                chịu trách nhiệm đối với các vấn đề liên quan đến tử vong,
+                thương tật thể chất hoặc tinh thần (bao gồm chấn thương tái
+                phát, diễn biến nặng hơn), hay các tình trạng bệnh lý, dịch bệnh
+                có thể ảnh hưởng đến Người Tham Dự và cộng đồng.
+              </li>
+            </ul>
+            <h2>V. CAM KẾT CỦA KHÁCH THAM DỰ</h2>
+            <ul>
+              <li>
+                Khách Tham Dự phải tuân thủ hướng dẫn của BTC và đội ngũ an ninh
+                để đảm bảo an toàn cho sự kiện.
+              </li>
+              <li>
+                Khách Tham Dự chịu trách nhiệm tự bảo vệ sức khỏe và tài sản của
+                mình trong quá trình tham gia sự kiện.
+              </li>
+              <li>
+                Khách Tham Dự chịu trách nhiệm cập nhật thông tin mới nhất về sự
+                kiện trên website và email chính thức của BTC.
+              </li>
+              <li>
+                Tự bảo quản Vé Điện Tử, Mã Vé Điện Tử và Vòng Đeo Tay trong suốt
+                quá trình tham gia Chương Trình.
+              </li>
+              <li>
+                Không được phép chuyển Vé Điện Tử, Mã Vé Điện Tử và Vòng Đeo Tay
+                cho người khác sử dụng để làm thủ tục vào cửa. Trường hợp BTC
+                phát hiện, Khách Tham Dự sẽ không được phép tiếp tục tham gia
+                Chương Trình.
+              </li>
+              <li>Làm thủ tục vào cửa đúng khu vực do BTC quy định.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- layout -->
+    <!-- footer -->
+    <script>
+      fetch("./components/footer.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("footer").innerHTML = data;
+        });
+    </script>
+    <footer id="footer"></footer>
+    <!-- end footer -->
+    <!-- end layout -->
+
+    <script src="./assets/libs/jquery-3.7.1.js"></script>
+    <script src="./assets/libs/lenis.min.js"></script>
+    <script src="./assets/libs/gsap.min.js"></script>
+    <script src="./assets/libs/ScrollTrigger.min.js"></script>
+    <script src="./assets/libs/SplitText.min.js"></script>
+    <script src="./assets/libs/bootstrap.bundle.min.js"></script>
+    <script src="./assets/libs/imagesloaded.pkgd.min.js"></script>
+    <script src="./assets/libs/swiper-bundle.min.js"></script>
+    <script src="./assets/libs/ScrollToPlugin.min.js"></script>
+    <!-- import custom js -->
+    <script type="module" src="./assets/main/js/script.min.js"></script>
+
+    <!-- end import custom js -->
+  </body>
+</html>
+<!-- https://gsap.com/community/forums/topic/30338-circular-carouselslider/ -->
