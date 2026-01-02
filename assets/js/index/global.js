@@ -15,24 +15,24 @@ export function swiperSong() {
     autoplay: {
       delay: 3000,
       disableOnInteraction: false,
-      pauseOnMouseEnter: false
+      pauseOnMouseEnter: false,
     },
 
     breakpoints: {
       992: {
         slidesPerView: 3,
-        spaceBetween: -10
-      }
+        spaceBetween: -10,
+      },
     },
 
     pagination: {
       el: ".swiper-pagination",
-      clickable: true
+      clickable: true,
     },
 
     navigation: {
       nextEl: ".music-slider .swiper-button-next",
-      prevEl: ".music-slider .swiper-button-prev"
+      prevEl: ".music-slider .swiper-button-prev",
     },
 
     on: {
@@ -41,8 +41,8 @@ export function swiperSong() {
       },
       resize() {
         handleAutoplay(this);
-      }
-    }
+      },
+    },
   });
 }
 export function handleAutoplay(musicSwiper) {
@@ -62,23 +62,23 @@ export function swiperTickets() {
       0: {
         slidesPerView: 2.8,
         spaceBetween: 13,
-        slidesOffsetAfter: 13
+        slidesOffsetAfter: 13,
       },
       480: {
         slidesPerView: 3.5,
-        slidesOffsetAfter: 13
+        slidesOffsetAfter: 13,
       },
       992: {
         slidesPerView: 5,
         spaceBetween: 24,
-        slidesOffsetAfter: 0
-      }
+        slidesOffsetAfter: 0,
+      },
     },
 
     pagination: {
       el: ".swiper-pagination",
-      clickable: true
-    }
+      clickable: true,
+    },
   });
 }
 export function scrollToSection() {
@@ -100,9 +100,9 @@ export function scrollToSection() {
         duration: 0.5,
         scrollTo: {
           y: targetId,
-          offsetY: 0
+          offsetY: 0,
         },
-        ease: "none"
+        ease: "none",
       });
     });
   });
@@ -119,7 +119,7 @@ export function scrollToSection() {
         if (section === sections[0]) {
           menuLinks.forEach((link) => link.classList.remove("active"));
         }
-      }
+      },
     });
   });
 
@@ -134,24 +134,24 @@ export function scrollToSection() {
 export function animation() {
   gsap.utils.toArray("[data-fade-in]").forEach((element) => {
     const direction = element.getAttribute("data-parallax-direction") || "up";
-    const distance = element.getAttribute("data-parallax-distance") || 50;
+    const distance = element.getAttribute("data-parallax-distance") || 80;
 
     gsap.fromTo(
       element,
       {
         opacity: 0,
-        y: 20
+        y: 20,
       },
       {
         scrollTrigger: {
           trigger: element,
           start: "top 75%",
-          end: "bottom 75%"
+          end: "bottom 75%",
         },
         opacity: 1,
         y: 0,
         duration: 0.5,
-        ease: "sine.out"
+        ease: "sine.out",
       }
     );
 
@@ -161,8 +161,8 @@ export function animation() {
         trigger: element,
         start: "top bottom",
         end: "bottom top",
-        scrub: true
-      }
+        scrub: true,
+      },
     });
   });
 }
