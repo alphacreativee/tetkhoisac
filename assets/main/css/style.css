@@ -666,7 +666,15 @@ body {
 }
 
 .music {
-  padding-bottom: 130px;
+  padding-bottom: 100px;
+  background: #ffffe9;
+  position: relative;
+  z-index: 3;
+}
+.music-wrapper {
+  border-radius: 30px 30px 0 0;
+  transform: translateY(-30px);
+  overflow: hidden;
 }
 .music-slider {
   max-width: 75%;
@@ -682,7 +690,8 @@ body {
   margin-right: -100px;
 }
 .music .swiper-slide {
-  height: 530px;
+  aspect-ratio: 528/800;
+  height: auto;
 }
 .music .swiper-slide.swiper-slide-active .music-song {
   transform: scale(1);
