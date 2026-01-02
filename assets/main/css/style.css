@@ -369,7 +369,7 @@ body {
 }
 .form h2 {
   color: #fbfb79;
-  margin-bottom: 80px;
+  margin-bottom: 60px;
   font-weight: 500;
   font-size: 98px;
 }
@@ -406,9 +406,16 @@ body {
   font-weight: bold;
   padding: 12px 24px;
 }
+.form .field-item .phone-desc {
+  font-family: "Mona Sans", sans-serif;
+  font-size: 11px;
+  color: #e2e2e2;
+  margin-top: 8px;
+}
 .form .field-item.field-accept a {
   transition: all 0.4s ease;
   position: relative;
+  font-family: "Archivo", sans-serif;
 }
 .form .field-item.field-accept a::before {
   content: "";
@@ -428,7 +435,7 @@ body {
 }
 .form .field-item.field-accept label {
   text-transform: none;
-  font-family: "Archivo", sans-serif;
+  font-family: "Mona Sans", sans-serif;
   display: flex;
   margin-bottom: 0;
   display: flex;
@@ -758,9 +765,10 @@ body {
 }
 .term-wrapper .title {
   margin-bottom: 40px;
+  font-size: 54px;
 }
 .term-wrapper .content {
-  font-family: "Archivo", sans-serif;
+  font-family: "Mona Sans", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 150%;

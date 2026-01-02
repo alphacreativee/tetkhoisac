@@ -20,6 +20,7 @@
     <!-- link custom css page -->
     <link rel="stylesheet" href="./assets/fonts/phudu/stylesheet.css" />
     <link rel="stylesheet" href="./assets/fonts/archivo/stylesheet.css" />
+    <link rel="stylesheet" href="./assets/fonts/MonaSans/stylesheet.css" />
     <link rel="stylesheet" href="./assets/main/css/style.min.css" />
     <!-- end link custom css page -->
     <!-- scrollRestoration -->
@@ -277,16 +278,23 @@
                 <input type="text" autocomplete="off" name="name" />
               </div>
               <div class="field-item">
-                <label for="phone">số phôn (sđt)</label>
+                <label for="phone">Số điện thoại</label>
                 <input
                   type="tel"
                   pattern="[0-9]{10,11}"
                   autocomplete="off"
                   name="phone"
                 />
+                <div class="phone-desc">
+                  Số điện thoại đăng ký bắt buộc phải liên kết với tài khoản
+                  Zalo hợp lệ. <br />
+                  Mỗi số điện thoại chỉ được nhận 01 vé tham dự. Trường hợp đăng
+                  ký trùng số điện thoại, BTC có quyền từ chối cung cấp thông
+                  tin vé cho người đăng ký.
+                </div>
               </div>
               <div class="field-item">
-                <label for="email">i-meo (Email)</label>
+                <label for="email">Email</label>
                 <input type="email" autocomplete="off" name="email" />
               </div>
               <div class="field-item field-accept">

@@ -19,7 +19,7 @@
 
   h2 {
     color: #fbfb79;
-    margin-bottom: 80px;
+    margin-bottom: 60px;
     font-weight: 500;
     font-size: 98px;
   }
@@ -63,10 +63,18 @@
       padding: 12px 24px;
     }
 
+    .phone-desc {
+      font-family: "Mona Sans", sans-serif;
+      font-size: 11px;
+      color: #e2e2e2;
+      margin-top: 8px;
+    }
+
     &.field-accept {
       a {
         transition: all 0.4s ease;
         position: relative;
+        font-family: "Archivo", sans-serif;
 
         &::before {
           content: "";
@@ -90,7 +98,7 @@
       }
       label {
         text-transform: none;
-        font-family: "Archivo", sans-serif;
+        font-family: "Mona Sans", sans-serif;
         display: flex;
         margin-bottom: 0;
         display: flex;

@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'Mona Sans';
+    src: url('MonaSans-Regular.eot');
+    src: url('MonaSans-Regular.eot?#iefix') format('embedded-opentype'),
+        url('MonaSans-Regular.woff2') format('woff2'),
+        url('MonaSans-Regular.woff') format('woff'),
+        url('MonaSans-Regular.ttf') format('truetype'),
+        url('MonaSans-Regular.svg#MonaSans-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
