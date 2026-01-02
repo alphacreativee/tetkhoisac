@@ -3,7 +3,7 @@ import {
   swiperSong,
   swiperTickets,
   scrollToSection,
-  animation,
+  animation
 } from "../../js/index/global.js";
 ("use strict");
 $ = jQuery;
@@ -69,7 +69,7 @@ function formRegister() {
       "https://script.google.com/macros/s/AKfycbzJSGh6G7qgh1TkXOkqoXuNJz0M7inCU5n9aD1pmAaAoBqJmxrrXtT3fvKKcOpoMGia/exec",
       {
         method: "POST",
-        body: formData,
+        body: formData
       }
     )
       .then((res) => res.json())
@@ -118,6 +118,21 @@ function formRegister() {
 //   ).setMimeType(ContentService.MimeType.JSON);
 // }
 
+function toggleMobileMenu() {
+  if (!document.querySelector(".header-hambuger")) return;
+  const hambuger = document.querySelector(".header-hambuger");
+  const menu = document.querySelector(".header-menu");
+  const body = document.querySelector("body");
+
+  hambuger.addEventListener("click", function () {
+    console.log("click");
+
+    this.classList.toggle("active");
+    menu.classList.toggle("active");
+    body.classList.toggle("overflow-hidden");
+  });
+}
+
 const init = () => {
   gsap.registerPlugin(ScrollTrigger);
   animation();
@@ -125,6 +140,7 @@ const init = () => {
   swiperSong();
   swiperTickets();
   scrollToSection();
+  toggleMobileMenu();
 };
 preloadImages("img").then(() => {
   init();

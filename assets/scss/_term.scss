@@ -35,10 +35,18 @@
     position: relative;
     z-index: 2;
 
+    @media (max-width: 767px) {
+      width: 100%;
+    }
+
     .title {
       margin-bottom: 40px;
       font-size: 54px;
       // color: #fbfb79;
+
+      @media (max-width: 767px) {
+        font-size: 50px;
+      }
     }
 
     .content {
@@ -46,6 +54,10 @@
       font-weight: 400;
       font-size: 16px;
       line-height: 150%;
+
+      @media (max-width: 767px) {
+        font-size: 14px;
+      }
 
       h2,
       h2,
@@ -56,6 +68,10 @@
         line-height: 150%;
         font-family: var(--font-phudu);
         margin: 16px 0;
+
+        @media (max-width: 767px) {
+          font-size: 14px;
+        }
       }
 
       ul {
