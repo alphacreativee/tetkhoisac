@@ -351,7 +351,7 @@ body {
     width: 440px;
     max-width: 100%;
     position: fixed;
-    height: 100svh;
+    height: 100dvh;
     top: 0;
     right: 0;
     background: linear-gradient(180deg, #4d67ff 73.75%, #536afc 75.58%, #6572f5 78.21%, #8380e9 81.1%, #ad93d9 84.51%, #e2abc5 87.92%, #fdb8bb 89.5%, #fce29d 91.6%, #ffa710 100%);
