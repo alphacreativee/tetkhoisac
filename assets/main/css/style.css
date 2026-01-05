@@ -317,6 +317,10 @@ body {
   object-fit: contain;
 }
 
+.hidden-cta {
+  display: none;
+}
+
 #header {
   position: fixed;
   top: 0;
@@ -466,6 +470,10 @@ body {
 }
 
 .hide-menu .header-menu ul {
+  display: none;
+}
+
+.hide-menu .header-hambuger {
   display: none;
 }
 
@@ -879,7 +887,6 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   font-family: var(--font-mono-sans);
-  max-width: 85%;
   margin-bottom: 18px;
 }
 @media (max-width: 991px) {
@@ -1013,6 +1020,14 @@ body {
   }
 }
 
+@media (min-width: 992px) {
+  .mw-50 {
+    max-width: 60%;
+  }
+  .mw-70 {
+    max-width: 83%;
+  }
+}
 .introduction {
   position: relative;
   width: 100%;

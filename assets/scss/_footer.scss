@@ -31,7 +31,7 @@
       font-weight: 700;
       text-transform: uppercase;
       font-family: var(--font-mono-sans);
-      max-width: 85%;
+
       margin-bottom: 18px;
       @media (max-width: 991px) {
         font-size: 10px;
@@ -186,5 +186,13 @@
         height: auto;
       }
     }
+  }
+}
+@media (min-width: 992px) {
+  .mw-50 {
+    max-width: 60%;
+  }
+  .mw-70 {
+    max-width: 83%;
   }
 }
