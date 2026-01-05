@@ -87,6 +87,7 @@ export function scrollToSection() {
   const menuLinks = document.querySelectorAll(".header-menu a");
   const sections = document.querySelectorAll("section[id]");
   const headerMenu = document.querySelector(".header-menu");
+  const hambuger = document.querySelector(".header-hambuger");
   menuLinks.forEach((link) => {
     link.addEventListener("click", function (e) {
       e.preventDefault();
@@ -95,6 +96,7 @@ export function scrollToSection() {
       this.classList.add("active");
       if (window.innerWidth <= 991) {
         headerMenu.classList.remove("active");
+        hambuger.classList.remove("active");
       }
       const targetId = this.getAttribute("href");
 
@@ -169,6 +171,7 @@ export function animation() {
   });
 }
 export function countdownTimer() {
+  if (!document.querySelector(".countdown")) return;
   const countdownEl = document.querySelector(".countdown");
   const daysEl = document.getElementById("days");
   const hoursEl = document.getElementById("hours");

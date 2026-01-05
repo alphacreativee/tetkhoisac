@@ -20,7 +20,7 @@
     padding-top: 40px;
   }
   &-logo {
-    // pointer-events: auto;
+    pointer-events: auto;
     position: relative;
     z-index: 2;
   }
@@ -173,4 +173,7 @@
       }
     }
   }
+}
+.hide-menu .header-menu ul {
+  display: none;
 }

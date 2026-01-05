@@ -340,6 +340,7 @@ body {
   padding-top: 40px;
 }
 .header-logo {
+  pointer-events: auto;
   position: relative;
   z-index: 2;
 }
@@ -462,6 +463,10 @@ body {
 }
 .header-hambuger-container span:nth-child(3) {
   top: 12px;
+}
+
+.hide-menu .header-menu ul {
+  display: none;
 }
 
 .hero {

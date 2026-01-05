@@ -128,8 +128,6 @@ function toggleMobileMenu() {
 
   hambuger.addEventListener("click", function () {
     const isActive = this.classList.toggle("active");
-
-    this.classList.toggle("active");
     menu.classList.toggle("active");
     body.classList.toggle("overflow-hidden");
 
@@ -154,6 +152,7 @@ const init = () => {
   scrollToSection();
   toggleMobileMenu();
   scrollToTop();
+
   countdownTimer();
 };
 preloadImages("img").then(() => {
