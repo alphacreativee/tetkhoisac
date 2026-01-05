@@ -86,14 +86,16 @@ export function scrollToSection() {
 
   const menuLinks = document.querySelectorAll(".header-menu a");
   const sections = document.querySelectorAll("section[id]");
-
+  const headerMenu = document.querySelector(".header-menu");
   menuLinks.forEach((link) => {
     link.addEventListener("click", function (e) {
       e.preventDefault();
 
       menuLinks.forEach((item) => item.classList.remove("active"));
       this.classList.add("active");
-
+      if (window.innerWidth <= 991) {
+        headerMenu.classList.remove("active");
+      }
       const targetId = this.getAttribute("href");
 
       gsap.to(window, {
@@ -164,5 +166,65 @@ export function animation() {
         scrub: true,
       },
     });
+  });
+}
+export function countdownTimer() {
+  const countdownEl = document.querySelector(".countdown");
+  const daysEl = document.getElementById("days");
+  const hoursEl = document.getElementById("hours");
+  const minutesEl = document.getElementById("minutes");
+  const secondsEl = document.getElementById("seconds");
+
+  const targetDateString = countdownEl.getAttribute("data-time");
+  const popupCountdown = document.querySelector(".popup-countdown");
+  const popupContainer = document.querySelector(".popup-countdown-container");
+
+  const targetDate = new Date(targetDateString).getTime();
+  const now = new Date().getTime();
+
+  if (targetDate < now) {
+    popupCountdown.classList.add("d-none");
+    return;
+  }
+
+  function updateCountdown() {
+    const targetDate = new Date(targetDateString).getTime();
+    const now = new Date().getTime();
+    const difference = targetDate - now;
+
+    if (difference > 0) {
+      const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+      const hours = Math.floor(
+        (difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+      );
+      const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+      daysEl.textContent = days;
+      hoursEl.textContent = hours;
+      minutesEl.textContent = minutes;
+      secondsEl.textContent = seconds;
+    } else {
+      // Khi hết thời gian, ẩn popup
+      daysEl.textContent = 0;
+      hoursEl.textContent = 0;
+      minutesEl.textContent = 0;
+      secondsEl.textContent = 0;
+      popupCountdown.classList.add("hidden");
+    }
+  }
+
+  setInterval(updateCountdown, 1000);
+
+  updateCountdown();
+
+  popupCountdown.addEventListener("click", function (e) {
+    if (!popupContainer.contains(e.target)) {
+      popupCountdown.classList.add("hidden");
+    }
+  });
+
+  popupContainer.addEventListener("click", function (e) {
+    e.stopPropagation();
   });
 }

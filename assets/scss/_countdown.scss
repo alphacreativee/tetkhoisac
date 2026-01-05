@@ -1,0 +1,125 @@
+.popup-countdown {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10000;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.4s ease;
+  &.hidden {
+    opacity: 0;
+    visibility: hidden;
+  }
+  &-container {
+    // pointer-events: none;
+    position: relative;
+    max-width: 600px;
+    width: 100%;
+    border-radius: 26px;
+    overflow: hidden;
+    background: linear-gradient(
+      180deg,
+      #fbfb79 9.64%,
+      #f4f97a 16.06%,
+      #e2f67d 25.21%,
+      #c4f082 36.2%,
+      #9ae889 48.11%,
+      #65de93 60.93%,
+      #4fda97 66.43%,
+      #ffffd9 69.18%,
+      #d0f2e0 74.67%,
+      #5ad4f1 85.66%,
+      #00bdff 94.82%
+    );
+    @media (max-width: 991px) {
+      max-width: 345px;
+    }
+  }
+  .popup-title {
+    font-family: var(--font-phudu);
+    font-size: 70px;
+    line-height: 115%;
+    font-weight: 700;
+    color: #301d13;
+    text-align: center;
+    padding-top: 32px;
+    padding-bottom: 40px;
+    @media (max-width: 991px) {
+      font-size: 40px;
+    }
+  }
+  .popup-footer {
+    font-family: var(--font-phudu);
+    font-size: 32px;
+    line-height: 36px;
+    font-weight: 700;
+    color: #301d13;
+    text-align: center;
+    max-width: 450px;
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 30px;
+    @media (max-width: 991px) {
+      font-size: 18px;
+      max-width: 260px;
+      line-height: 20px;
+    }
+  }
+  .popup-art {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+  .countdown {
+    padding-left: 32px;
+    padding-right: 32px;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr auto 1fr;
+    margin-bottom: 30px;
+    .time-box {
+      background-color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .time-value {
+      font-size: 110px;
+      line-height: 1;
+      font-weight: 700;
+      font-family: var(--font-phudu);
+      color: #301d13;
+      @media (max-width: 991px) {
+        font-size: 64px;
+      }
+    }
+    .time-label {
+      font-size: 27px;
+      font-family: var(--font-phudu);
+      color: #301d13;
+      font-weight: 700;
+      @media (max-width: 991px) {
+        font-size: 16px;
+      }
+    }
+    .dot {
+      font-family: var(--font-phudu);
+      font-size: 103px;
+      line-height: 1;
+      font-weight: 700;
+      color: #301d13;
+      padding: 0 10px;
+      transform: translateY(5px);
+      @media (max-width: 991px) {
+        font-size: 60px;
+        padding: 0 5px;
+      }
+    }
+  }
+}
