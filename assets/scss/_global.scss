@@ -126,3 +126,32 @@
     background-color: #ffffe9;
   }
 }
+.animation-up {
+  animation: animation-up 3s ease infinite;
+}
+.animation-down {
+  animation: animation-down 3s ease infinite;
+}
+
+@keyframes animation-up {
+  0% {
+    transform: translateY(20px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(20px);
+  }
+}
+@keyframes animation-down {
+  0% {
+    transform: translateY(-20px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-20px);
+  }
+}

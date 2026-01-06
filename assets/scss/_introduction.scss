@@ -12,9 +12,9 @@
     position: absolute;
     z-index: 2;
     &.art-1 {
-      right: 200px;
+      right: 100px;
       top: 0;
-      transform: translateY(-25%);
+      transform: translateY(-5%);
       @media (max-width: 991px) {
         right: 10%;
         img {

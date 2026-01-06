@@ -159,15 +159,15 @@ export function animation() {
       }
     );
 
-    gsap.to(element, {
-      y: direction === "down" ? distance : -distance,
-      scrollTrigger: {
-        trigger: element,
-        start: "top bottom",
-        end: "bottom top",
-        scrub: true,
-      },
-    });
+    // gsap.to(element, {
+    //   y: direction === "down" ? distance : -distance,
+    //   scrollTrigger: {
+    //     trigger: element,
+    //     start: "top bottom",
+    //     end: "bottom top",
+    //     scrub: true,
+    //   },
+    // });
   });
 }
 export function countdownTimer() {
