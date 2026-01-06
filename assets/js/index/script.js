@@ -6,6 +6,7 @@ import {
   animation,
   scrollToTop,
   countdownTimer,
+  header,
 } from "../../js/index/global.js";
 ("use strict");
 $ = jQuery;
@@ -152,7 +153,7 @@ const init = () => {
   scrollToSection();
   toggleMobileMenu();
   scrollToTop();
-
+  header();
   countdownTimer();
 };
 preloadImages("img").then(() => {

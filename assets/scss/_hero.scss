@@ -8,12 +8,13 @@
     position: absolute;
     z-index: 2;
     &.hero-1 {
-      top: 80px;
+      top: 100px;
       left: calc(calc(1 / 12) * 100%);
       transform: translateX(-70px);
       @media (max-width: 991px) {
         transform: translateX(0);
         top: 100px;
+        display: none;
         img {
           width: 82px;
           height: auto;
@@ -22,11 +23,12 @@
     }
     &.hero-2 {
       right: calc(calc(1 / 12) * 100%);
-      top: 80px;
+      top: 100px;
       transform: translateX(50px);
       @media (max-width: 991px) {
         transform: translateX(0);
         top: 100px;
+        display: none;
         img {
           width: 82px;
           height: auto;

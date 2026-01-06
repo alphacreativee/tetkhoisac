@@ -121,3 +121,8 @@
 .hidden-cta {
   display: none;
 }
+.map {
+  @media (max-width: 991px) {
+    background-color: #ffffe9;
+  }
+}

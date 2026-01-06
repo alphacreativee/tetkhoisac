@@ -5,7 +5,11 @@
   left: 0;
   pointer-events: none;
   z-index: 999;
-
+  background-color: #4d67ff;
+  transition: transform 0.5s ease;
+  &.scrolled {
+    transform: translateY(-100%);
+  }
   @media (max-width: 991px) {
     pointer-events: auto;
   }
@@ -17,7 +21,8 @@
     }
   }
   &-main {
-    padding-top: 40px;
+    padding-top: 24px;
+    padding-bottom: 24px;
   }
   &-logo {
     pointer-events: auto;
@@ -88,17 +93,19 @@
           line-height: 1;
           font-weight: 700;
           transition: color 0.3s ease-in-out;
-
+          color: #fbfb79;
+          &:hover {
+            color: #4fda97;
+          }
           @media (max-width: 991px) {
             font-size: 40px;
             padding: 20px 0;
             display: block;
             width: 100%;
-            color: #fbfb79;
           }
 
           &.active {
-            color: #fc3e28;
+            color: #4fda97;
           }
         }
       }

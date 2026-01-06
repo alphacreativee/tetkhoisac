@@ -138,7 +138,7 @@ export function scrollToSection() {
 export function animation() {
   gsap.utils.toArray("[data-fade-in]").forEach((element) => {
     const direction = element.getAttribute("data-parallax-direction") || "up";
-    const distance = element.getAttribute("data-parallax-distance") || 80;
+    const distance = element.getAttribute("data-parallax-distance") || 50;
 
     gsap.fromTo(
       element,
@@ -230,4 +230,32 @@ export function countdownTimer() {
   popupContainer.addEventListener("click", function (e) {
     e.stopPropagation();
   });
+}
+export function header() {
+  const header = document.getElementById("header");
+  if (!header) return null;
+
+  let lastScroll = 0;
+
+  const trigger = ScrollTrigger.create({
+    start: "top top",
+    end: 9999,
+    onUpdate: (self) => {
+      const currentScroll = self.scroll();
+
+      if (currentScroll <= 0) {
+        header.classList.remove("scrolled");
+      } else if (currentScroll > lastScroll) {
+        // Scroll down
+        header.classList.add("scrolled");
+      } else {
+        // Scroll up
+        header.classList.remove("scrolled");
+      }
+
+      lastScroll = currentScroll;
+    },
+  });
+
+  return trigger;
 }
