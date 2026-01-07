@@ -1080,6 +1080,20 @@ body {
   justify-content: center;
   align-items: center;
 }
+.footer-main-col a.novusland img {
+  width: 58px;
+  height: auto;
+}
+@media (max-width: 991px) {
+  .footer-main-col a.novusland img {
+    width: 38px;
+  }
+}
+@media (max-width: 991px) {
+  .footer-main-col:nth-child(2) .footer-title {
+    text-align: center;
+  }
+}
 @media (max-width: 991px) {
   .footer-main-logo ul li a img {
     width: 106px;
