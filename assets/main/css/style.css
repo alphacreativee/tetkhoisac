@@ -302,7 +302,6 @@ body {
   z-index: 99;
   right: 80px;
   bottom: 80px;
-  animation: shake 3.5s infinite;
 }
 @media (max-width: 991px) {
   #cta-tickets {
@@ -561,36 +560,17 @@ body {
 .hero .hero-art-work {
   position: absolute;
   z-index: 2;
-}
-.hero .hero-art-work.hero-1 {
-  top: 100px;
-  left: 8.3333333333%;
-  transform: translateX(-70px);
+  bottom: 70px;
+  left: 29%;
+  animation: shake 3s ease infinite;
 }
 @media (max-width: 991px) {
-  .hero .hero-art-work.hero-1 {
-    transform: translateX(0);
-    top: 100px;
-    display: none;
+  .hero .hero-art-work {
+    left: 40%;
+    bottom: 40px;
   }
-  .hero .hero-art-work.hero-1 img {
-    width: 82px;
-    height: auto;
-  }
-}
-.hero .hero-art-work.hero-2 {
-  right: 8.3333333333%;
-  top: 100px;
-  transform: translateX(50px);
-}
-@media (max-width: 991px) {
-  .hero .hero-art-work.hero-2 {
-    transform: translateX(0);
-    top: 100px;
-    display: none;
-  }
-  .hero .hero-art-work.hero-2 img {
-    width: 82px;
+  .hero .hero-art-work img {
+    width: 113px;
     height: auto;
   }
 }
