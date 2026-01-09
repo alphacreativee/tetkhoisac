@@ -104,7 +104,7 @@
   z-index: 99;
   right: 80px;
   bottom: 80px;
-
+  animation: shake 3.5s infinite;
   @media (max-width: 991px) {
     width: 96px;
     height: 80px;
@@ -153,5 +153,24 @@
   }
   100% {
     transform: translateY(-20px);
+  }
+}
+@keyframes shake {
+  0%,
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translate(-10px, -5px) rotate(-2deg);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translate(10px, 5px) rotate(2deg);
   }
 }

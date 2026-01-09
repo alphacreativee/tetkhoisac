@@ -6,17 +6,25 @@
   &-main {
     border-radius: 30px 30px 0 0;
     overflow: hidden;
-    transform: translateY(-30px);
+    transform: translateY(-5px);
   }
   &-art {
     position: absolute;
     z-index: 2;
+
     &.art-1 {
-      right: 100px;
-      top: 0;
+      right: 70px;
+      top: 20%;
       transform: translateY(-5%);
+      img {
+        width: 170px;
+        height: auto;
+      }
       @media (max-width: 991px) {
-        right: 10%;
+        right: auto;
+        left: auto;
+        right: 5%;
+        top: 20%;
         img {
           width: 115px;
           height: auto;
@@ -25,11 +33,15 @@
     }
     &.art-2 {
       left: 70px;
-      top: 3%;
+      top: 20%;
       transform: translateY(-5%);
+      img {
+        width: 222px;
+        height: auto;
+      }
       @media (max-width: 991px) {
         left: 5%;
-        top: -15%;
+        top: 28%;
         img {
           width: 125px;
           height: auto;
@@ -39,8 +51,13 @@
     &.art-3 {
       left: 50px;
       top: 50%;
+      img {
+        width: 340px;
+        height: auto;
+      }
       @media (max-width: 991px) {
         left: 0;
+        top: 60%;
         img {
           width: 100px;
           height: auto;
@@ -50,9 +67,48 @@
     &.art-4 {
       bottom: 100px;
       right: 50px;
+      img {
+        width: 330px;
+        height: auto;
+      }
       @media (max-width: 991px) {
-        bottom: 45%;
+        bottom: 28%;
         right: 0;
+        img {
+          width: 115px;
+          height: auto;
+        }
+      }
+    }
+    &.art-5 {
+      left: 5%;
+      top: 100px;
+      transform: translateY(-5%);
+      img {
+        width: 110px;
+        height: auto;
+      }
+      @media (max-width: 991px) {
+        right: 10%;
+        display: none;
+        img {
+          width: 115px;
+          height: auto;
+        }
+      }
+    }
+    &.art-6 {
+      right: 15%;
+      top: 5%;
+      transform: translateY(-5%);
+      img {
+        width: 110px;
+        height: auto;
+      }
+      @media (max-width: 991px) {
+        right: auto;
+        left: 7%;
+        top: -5%;
         img {
           width: 115px;
           height: auto;

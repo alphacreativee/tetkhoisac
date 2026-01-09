@@ -16,6 +16,19 @@
     opacity: 0;
     visibility: hidden;
   }
+  .popup-ic-close {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    z-index: 123;
+    padding: 24px;
+    @media (max-width: 991px) {
+      padding: 12px;
+    }
+    &:hover {
+      cursor: pointer;
+    }
+  }
   &-container {
     // pointer-events: none;
     position: relative;

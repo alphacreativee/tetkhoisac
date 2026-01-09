@@ -30,10 +30,13 @@
     font-size: 98px;
     position: relative;
     z-index: 2;
-
+    max-width: 785px;
+    margin-left: auto;
+    margin-right: auto;
     @media (max-width: 767px) {
       font-size: 50px;
       margin-bottom: 30px;
+      padding: 0 20px;
     }
   }
 

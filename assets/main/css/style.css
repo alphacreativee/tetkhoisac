@@ -302,6 +302,7 @@ body {
   z-index: 99;
   right: 80px;
   bottom: 80px;
+  animation: shake 3.5s infinite;
 }
 @media (max-width: 991px) {
   #cta-tickets {
@@ -357,6 +358,17 @@ body {
     transform: translateY(-20px);
   }
 }
+@keyframes shake {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translate(-10px, -5px) rotate(-2deg);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translate(10px, 5px) rotate(2deg);
+  }
+}
 #header {
   position: fixed;
   top: 0;
@@ -385,10 +397,22 @@ body {
   padding-top: 24px;
   padding-bottom: 24px;
 }
+@media (max-width: 991px) {
+  .header-main {
+    padding-top: 18px;
+    padding-bottom: 18px;
+  }
+}
 .header-logo {
   pointer-events: auto;
   position: relative;
   z-index: 2;
+}
+@media (max-width: 991px) {
+  .header-logo img {
+    width: 64px;
+    height: auto;
+  }
 }
 .header-menu {
   pointer-events: auto;
@@ -525,9 +549,14 @@ body {
 .hero {
   position: relative;
   width: 100%;
-  height: calc(100svh + 30px);
+  height: auto;
   overflow: hidden;
   z-index: 1;
+}
+@media (max-width: 991px) {
+  .hero {
+    height: 110svh;
+  }
 }
 .hero .hero-art-work {
   position: absolute;
@@ -634,11 +663,15 @@ body {
   font-size: 98px;
   position: relative;
   z-index: 2;
+  max-width: 785px;
+  margin-left: auto;
+  margin-right: auto;
 }
 @media (max-width: 767px) {
   .form h2 {
     font-size: 50px;
     margin-bottom: 30px;
+    padding: 0 20px;
   }
 }
 .form .form-wrapper {
@@ -1132,20 +1165,27 @@ body {
 .introduction-main {
   border-radius: 30px 30px 0 0;
   overflow: hidden;
-  transform: translateY(-30px);
+  transform: translateY(-5px);
 }
 .introduction-art {
   position: absolute;
   z-index: 2;
 }
 .introduction-art.art-1 {
-  right: 100px;
-  top: 0;
+  right: 70px;
+  top: 20%;
   transform: translateY(-5%);
+}
+.introduction-art.art-1 img {
+  width: 170px;
+  height: auto;
 }
 @media (max-width: 991px) {
   .introduction-art.art-1 {
-    right: 10%;
+    right: auto;
+    left: auto;
+    right: 5%;
+    top: 20%;
   }
   .introduction-art.art-1 img {
     width: 115px;
@@ -1154,13 +1194,17 @@ body {
 }
 .introduction-art.art-2 {
   left: 70px;
-  top: 3%;
+  top: 20%;
   transform: translateY(-5%);
+}
+.introduction-art.art-2 img {
+  width: 222px;
+  height: auto;
 }
 @media (max-width: 991px) {
   .introduction-art.art-2 {
     left: 5%;
-    top: -15%;
+    top: 28%;
   }
   .introduction-art.art-2 img {
     width: 125px;
@@ -1171,9 +1215,14 @@ body {
   left: 50px;
   top: 50%;
 }
+.introduction-art.art-3 img {
+  width: 340px;
+  height: auto;
+}
 @media (max-width: 991px) {
   .introduction-art.art-3 {
     left: 0;
+    top: 60%;
   }
   .introduction-art.art-3 img {
     width: 100px;
@@ -1184,12 +1233,55 @@ body {
   bottom: 100px;
   right: 50px;
 }
+.introduction-art.art-4 img {
+  width: 330px;
+  height: auto;
+}
 @media (max-width: 991px) {
   .introduction-art.art-4 {
-    bottom: 45%;
+    bottom: 28%;
     right: 0;
   }
   .introduction-art.art-4 img {
+    width: 115px;
+    height: auto;
+  }
+}
+.introduction-art.art-5 {
+  left: 5%;
+  top: 100px;
+  transform: translateY(-5%);
+}
+.introduction-art.art-5 img {
+  width: 110px;
+  height: auto;
+}
+@media (max-width: 991px) {
+  .introduction-art.art-5 {
+    right: 10%;
+    display: none;
+  }
+  .introduction-art.art-5 img {
+    width: 115px;
+    height: auto;
+  }
+}
+.introduction-art.art-6 {
+  right: 15%;
+  top: 5%;
+  transform: translateY(-5%);
+}
+.introduction-art.art-6 img {
+  width: 110px;
+  height: auto;
+}
+@media (max-width: 991px) {
+  .introduction-art.art-6 {
+    right: auto;
+    left: 7%;
+    top: -5%;
+  }
+  .introduction-art.art-6 img {
     width: 115px;
     height: auto;
   }
@@ -1236,8 +1328,13 @@ body {
 }
 .music-wrapper {
   border-radius: 30px 30px 0 0;
-  transform: translateY(-30px);
+  transform: translateY(-45px);
   overflow: hidden;
+}
+@media (max-width: 991px) {
+  .music-wrapper {
+    transform: translateY(-27px);
+  }
 }
 .music-slider {
   max-width: 75%;
@@ -1458,6 +1555,21 @@ body {
 .popup-countdown.hidden {
   opacity: 0;
   visibility: hidden;
+}
+.popup-countdown .popup-ic-close {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  z-index: 123;
+  padding: 24px;
+}
+@media (max-width: 991px) {
+  .popup-countdown .popup-ic-close {
+    padding: 12px;
+  }
+}
+.popup-countdown .popup-ic-close:hover {
+  cursor: pointer;
 }
 .popup-countdown-container {
   position: relative;

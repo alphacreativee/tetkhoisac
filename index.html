@@ -156,6 +156,9 @@
     <!-- popup countdown -->
     <div class="popup-countdown">
       <div class="popup-countdown-container">
+        <div class="popup-ic-close">
+          <img src="./assets/images/ic_close.svg" alt="" />
+        </div>
         <div class="popup-art">
           <img src="./assets/images/art-popup.png" alt="" />
         </div>
@@ -192,9 +195,9 @@
           <picture>
             <source
               media="(max-width: 768px)"
-              srcset="./assets/images/banner-mobile.webp"
+              srcset="./assets/images/banner-mobile.png"
             />
-            <img src="./assets/images/banner.webp" alt="" />
+            <img src="./assets/images/banner.png" alt="" />
           </picture>
         </div>
         <div class="hero-art-work hero-1 d-none">
@@ -229,6 +232,16 @@
             <img src="./assets/images/intro.png" alt="" />
           </picture>
         </div>
+        <div
+          class="introduction-art art-6 animation-down"
+          data-fade-in
+          data-parallax-direction="down"
+        >
+          <img src="./assets/images/ic_art-5.svg" alt="" />
+        </div>
+        <div class="introduction-art art-5 animation-up" data-fade-in>
+          <img src="./assets/images/art-2.svg" alt="" />
+        </div>
         <div class="introduction-art art-1 animation-up" data-fade-in>
           <img src="./assets/images/art-1.svg" alt="" />
         </div>
@@ -258,7 +271,7 @@
           <picture>
             <source
               media="(max-width: 768px)"
-              srcset="./assets/images/event-mobile.png"
+              srcset="./assets/images/event-2-mobile.png"
             />
             <img src="./assets/images/event.png" alt="" />
           </picture>
@@ -280,23 +293,23 @@
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
                   <div class="music-song">
-                    <img src="./assets/images/singer-1.jpg" alt="" />
+                    <img src="./assets/images/song-3.png" alt="" />
                   </div>
                 </div>
 
                 <div class="swiper-slide">
                   <div class="music-song">
-                    <img src="./assets/images/singer-2.jpg" alt="" />
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="music-song">
-                    <img src="./assets/images/singer-3.jpg" alt="" />
+                    <img src="./assets/images/song-2.png" alt="" />
                   </div>
                 </div>
                 <div class="swiper-slide">
                   <div class="music-song">
                     <img src="./assets/images/singer-4.jpg" alt="" />
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="music-song">
+                    <img src="./assets/images/song-1.png" alt="" />
                   </div>
                 </div>
               </div>
@@ -366,8 +379,8 @@
         </div>
         <div class="tickets-cards limit-w">
           <div class="title">
-            Tham gia hết mình các hoạt động của RISE trong các ngày 4.1 - 22.1
-            để nhận liền tay vé tham dự Đại nhạc hội tết khởi sắc nha!
+            CHỈ CẦN THAM GIA MỘT HOẠT ĐỘNG BẤT KỲ CỦA RISE TRONG CÁC NGÀY 04.01
+            - 22.01, BẠN CÓ THỂ NHẬN NGAY VÉ THAM DỰ ĐẠI NHẠC HỘI TẾT KHỞI SẮC!
           </div>
           <div class="swiper swiper-tickets">
             <div class="swiper-wrapper">
@@ -413,7 +426,7 @@
           <div class="icon-mobile animation-up">
             <img src="./assets/images/icon-form-mobile.svg" alt="" />
           </div>
-          <h2 class="title text-center">lấy vé ngayy!</h2>
+          <h2 class="title text-center">ĐĂNG KÝ NHẬN VÉ MIỄN PHÍ 100%</h2>
           <div class="art-form-left animation-up" data-fade-in>
             <img src="./assets/images/form-left.svg" alt="" />
           </div>
@@ -446,10 +459,10 @@
                   tin vé cho người đăng ký.
                 </div>
               </div>
-              <div class="field-item">
+              <!-- <div class="field-item d-none">
                 <label for="email">Email</label>
                 <input type="email" autocomplete="off" name="email" />
-              </div>
+              </div> -->
               <div class="field-item field-accept">
                 <label for="accept">
                   <input type="checkbox" name="accept" id="accept" />

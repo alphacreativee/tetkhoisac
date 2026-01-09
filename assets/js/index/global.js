@@ -181,7 +181,7 @@ export function countdownTimer() {
   const targetDateString = countdownEl.getAttribute("data-time");
   const popupCountdown = document.querySelector(".popup-countdown");
   const popupContainer = document.querySelector(".popup-countdown-container");
-
+  const icClosePopup = document.querySelector(".popup-ic-close");
   const targetDate = new Date(targetDateString).getTime();
   const now = new Date().getTime();
 
@@ -221,10 +221,8 @@ export function countdownTimer() {
 
   updateCountdown();
 
-  popupCountdown.addEventListener("click", function (e) {
-    if (!popupContainer.contains(e.target)) {
-      popupCountdown.classList.add("hidden");
-    }
+  icClosePopup.addEventListener("click", function (e) {
+    popupCountdown.classList.add("hidden");
   });
 
   popupContainer.addEventListener("click", function (e) {

@@ -23,11 +23,21 @@
   &-main {
     padding-top: 24px;
     padding-bottom: 24px;
+    @media (max-width: 991px) {
+      padding-top: 18px;
+      padding-bottom: 18px;
+    }
   }
   &-logo {
     pointer-events: auto;
     position: relative;
     z-index: 2;
+    @media (max-width: 991px) {
+      img {
+        width: 64px;
+        height: auto;
+      }
+    }
   }
   &-menu {
     pointer-events: auto;

@@ -1,9 +1,13 @@
 .hero {
   position: relative;
   width: 100%;
-  height: calc(100svh + 30px);
+  // height: calc(100svh + 30px);
+  height: auto;
   overflow: hidden;
   z-index: 1;
+  @media (max-width: 991px) {
+    height: 110svh;
+  }
   .hero-art-work {
     position: absolute;
     z-index: 2;
