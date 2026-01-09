@@ -6,7 +6,7 @@ import {
   animation,
   scrollToTop,
   countdownTimer,
-  header,
+  header
 } from "../../js/index/global.js";
 ("use strict");
 $ = jQuery;
@@ -27,6 +27,10 @@ function getParam(name) {
 function formRegister() {
   const form = document.getElementById("form-register");
   if (!form) return;
+
+  const refLink = document.referrer || "direct";
+
+  console.log(refLink);
 
   const submitBtn = form.querySelector("button[type='submit']");
   const acceptCheckbox = form.querySelector("#accept");
@@ -72,7 +76,7 @@ function formRegister() {
       "https://script.google.com/macros/s/AKfycbzJSGh6G7qgh1TkXOkqoXuNJz0M7inCU5n9aD1pmAaAoBqJmxrrXtT3fvKKcOpoMGia/exec",
       {
         method: "POST",
-        body: formData,
+        body: formData
       }
     )
       .then((res) => res.json())
