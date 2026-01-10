@@ -39,6 +39,7 @@ function formRegister() {
 
   form.querySelector('[name="utm_source"]').value = getParam("utm_source");
   form.querySelector('[name="utm_medium"]').value = getParam("utm_medium");
+  form.querySelector('[name="ref_link"]').value = refLink;
 
   submitBtn.disabled = true;
 
