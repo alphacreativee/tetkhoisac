@@ -78,12 +78,16 @@ function formRegister() {
     submitBtn.classList.add("aloading");
 
     const formData = new FormData(form);
+    const params = new URLSearchParams(formData);
 
     fetch(
       "https://script.google.com/macros/s/AKfycbzJSGh6G7qgh1TkXOkqoXuNJz0M7inCU5n9aD1pmAaAoBqJmxrrXtT3fvKKcOpoMGia/exec",
       {
         method: "POST",
-        body: formData
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded"
+        },
+        body: params.toString()
       }
     )
       .then((res) => res.json())
