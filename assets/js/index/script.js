@@ -54,6 +54,8 @@ function formRegister() {
   form.addEventListener("submit", function (e) {
     e.preventDefault();
 
+    form.querySelector('[name="ref_link"]').value = getReferrer() || "direct";
+
     let isValid = true;
     form
       .querySelectorAll(".field-item")
