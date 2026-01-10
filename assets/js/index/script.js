@@ -41,7 +41,7 @@ function formRegister() {
 
   form.querySelector('[name="utm_source"]').value = getParam("utm_source");
   form.querySelector('[name="utm_medium"]').value = getParam("utm_medium");
-  form.querySelector('[name="ref_link"]').value = getReferrer();
+  form.querySelector('[name="ref_link"]').value = getReferrer() || "direct";
 
   console.log("ref_link:", getReferrer());
 
@@ -53,8 +53,6 @@ function formRegister() {
 
   form.addEventListener("submit", function (e) {
     e.preventDefault();
-
-    form.querySelector('[name="ref_link"]').value = getReferrer() || "direct";
 
     let isValid = true;
     form
@@ -85,10 +83,7 @@ function formRegister() {
       "https://script.google.com/macros/s/AKfycbzJSGh6G7qgh1TkXOkqoXuNJz0M7inCU5n9aD1pmAaAoBqJmxrrXtT3fvKKcOpoMGia/exec",
       {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify(formDataObj)
+        body: formData
       }
     )
       .then((res) => res.json())
