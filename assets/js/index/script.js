@@ -79,15 +79,16 @@ function formRegister() {
 
     const formData = new FormData(form);
     const params = new URLSearchParams(formData);
+    const formDataObj = Object.fromEntries(new FormData(form).entries());
 
     fetch(
       "https://script.google.com/macros/s/AKfycbzJSGh6G7qgh1TkXOkqoXuNJz0M7inCU5n9aD1pmAaAoBqJmxrrXtT3fvKKcOpoMGia/exec",
       {
         method: "POST",
         headers: {
-          "Content-Type": "application/x-www-form-urlencoded"
+          "Content-Type": "application/json"
         },
-        body: params.toString()
+        body: JSON.stringify(formDataObj)
       }
     )
       .then((res) => res.json())
