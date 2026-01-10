@@ -24,13 +24,15 @@ function getParam(name) {
   return url.searchParams.get(name) || "N/A";
 }
 
+function getReferrer() {
+  return document.referrer && document.referrer !== ""
+    ? document.referrer
+    : "direct";
+}
+
 function formRegister() {
   const form = document.getElementById("form-register");
   if (!form) return;
-
-  const refLink = document.referrer || "direct";
-
-  console.log(refLink);
 
   const submitBtn = form.querySelector("button[type='submit']");
   const acceptCheckbox = form.querySelector("#accept");
@@ -39,7 +41,9 @@ function formRegister() {
 
   form.querySelector('[name="utm_source"]').value = getParam("utm_source");
   form.querySelector('[name="utm_medium"]').value = getParam("utm_medium");
-  form.querySelector('[name="ref_link"]').value = refLink;
+  form.querySelector('[name="ref_link"]').value = getReferrer();
+
+  console.log("ref_link:", getReferrer());
 
   submitBtn.disabled = true;
 
