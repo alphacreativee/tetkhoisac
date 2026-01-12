@@ -186,6 +186,7 @@ export function animation() {
 }
 export function countdownTimer() {
   if (!document.querySelector(".countdown")) return;
+
   const countdownEl = document.querySelector(".countdown");
   const daysEl = document.getElementById("days");
   const hoursEl = document.getElementById("hours");
@@ -196,16 +197,26 @@ export function countdownTimer() {
   const popupCountdown = document.querySelector(".popup-countdown");
   const popupContainer = document.querySelector(".popup-countdown-container");
   const icClosePopup = document.querySelector(".popup-ic-close");
-  const targetDate = new Date(targetDateString).getTime();
+
+  // Fix format date cho Safari/iOS
+  const formattedDateString = targetDateString.replace(/-/g, "/");
+  const targetDate = new Date(formattedDateString).getTime();
+
+  // Kiểm tra targetDate có hợp lệ không
+  if (isNaN(targetDate)) {
+    console.error("Invalid date format:", targetDateString);
+    popupCountdown?.classList.add("d-none");
+    return;
+  }
+
   const now = new Date().getTime();
 
   if (targetDate < now) {
-    popupCountdown.classList.add("d-none");
+    popupCountdown?.classList.add("d-none");
     return;
   }
 
   function updateCountdown() {
-    const targetDate = new Date(targetDateString).getTime();
     const now = new Date().getTime();
     const difference = targetDate - now;
 
@@ -222,24 +233,23 @@ export function countdownTimer() {
       minutesEl.textContent = minutes;
       secondsEl.textContent = seconds;
     } else {
-      // Khi hết thời gian, ẩn popup
       daysEl.textContent = 0;
       hoursEl.textContent = 0;
       minutesEl.textContent = 0;
       secondsEl.textContent = 0;
-      popupCountdown.classList.add("hidden");
+      popupCountdown?.classList.add("hidden");
+      clearInterval(countdownInterval);
     }
   }
 
-  setInterval(updateCountdown, 1000);
-
+  const countdownInterval = setInterval(updateCountdown, 1000);
   updateCountdown();
 
-  icClosePopup.addEventListener("click", function (e) {
-    popupCountdown.classList.add("hidden");
+  icClosePopup?.addEventListener("click", function () {
+    popupCountdown?.classList.add("hidden");
   });
 
-  popupContainer.addEventListener("click", function (e) {
+  popupContainer?.addEventListener("click", function (e) {
     e.stopPropagation();
   });
 }
