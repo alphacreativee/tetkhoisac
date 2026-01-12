@@ -193,12 +193,20 @@ export function countdownTimer() {
   const minutesEl = document.getElementById("minutes");
   const secondsEl = document.getElementById("seconds");
 
-  const targetDateString = countdownEl.getAttribute("data-time");
+  let targetDateString = countdownEl.getAttribute("data-time");
   const popupCountdown = document.querySelector(".popup-countdown");
   const popupContainer = document.querySelector(".popup-countdown-container");
   const icClosePopup = document.querySelector(".popup-ic-close");
 
-  // Fix format date cho Safari/iOS
+  // Chuẩn hóa format date cho Safari/iOS
+  targetDateString = targetDateString.trim();
+
+  // Nếu chỉ có ngày (YYYY/MM/DD hoặc YYYY-MM-DD), thêm giờ mặc định
+  if (!targetDateString.includes(":")) {
+    targetDateString += " 00:00:00";
+  }
+
+  // Thay - thành / để Safari chấp nhận
   const formattedDateString = targetDateString.replace(/-/g, "/");
   const targetDate = new Date(formattedDateString).getTime();
 
