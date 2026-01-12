@@ -200,9 +200,11 @@
             <img src="./assets/images/banner.png" alt="" />
           </picture>
         </div>
-        <a class="hero-art-work d-block" href="#form">
-          <img src="./assets/images/nvmp.png" alt="" />
-        </a>
+        <div class="hero-art-work d-block">
+          <div id="cta-tickets-wrapper">
+            <img src="./assets/images/nvmp.png" alt="" />
+          </div>
+        </div>
       </section>
       <section class="introduction" id="introduction">
         <div class="introduction-main">
@@ -484,13 +486,15 @@
     <!-- layout -->
     <!-- footer -->
     <div id="cta-tickets">
-      <picture>
-        <source
-          media="(max-width: 768px)"
-          srcset="./assets/images/img-cta-mobile.png"
-        />
-        <img src="./assets/images/img-cta.svg" alt="" />
-      </picture>
+      <div id="cta-tickets-wrapper">
+        <picture>
+          <source
+            media="(max-width: 768px)"
+            srcset="./assets/images/img-cta-mobile.png"
+          />
+          <img src="./assets/images/img-cta.svg" alt="" />
+        </picture>
+      </div>
     </div>
     <script>
       fetch("./components/footer.html")

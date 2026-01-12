@@ -295,6 +295,10 @@ body {
   opacity: 1;
 }
 
+#cta-tickets-wrapper {
+  cursor: pointer;
+}
+
 #cta-tickets {
   width: 170px;
   height: 140px;
@@ -302,6 +306,9 @@ body {
   z-index: 99;
   right: 80px;
   bottom: 80px;
+}
+#cta-tickets:hover {
+  cursor: pointer;
 }
 @media (max-width: 991px) {
   #cta-tickets {

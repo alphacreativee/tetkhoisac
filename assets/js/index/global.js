@@ -85,7 +85,7 @@ export function scrollToSection() {
   gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
 
   const menuLinks = document.querySelectorAll(".header-menu a");
-  const ctaTicketsLinks = document.querySelectorAll("#cta-tickets ");
+  const ctaTicketsLinks = document.querySelectorAll("#cta-tickets-wrapper");
   const sections = document.querySelectorAll("section[id]");
   const headerMenu = document.querySelector(".header-menu");
   const hambuger = document.querySelector(".header-hambuger");

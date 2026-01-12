@@ -96,7 +96,9 @@
     }
   }
 }
-
+#cta-tickets-wrapper {
+  cursor: pointer;
+}
 #cta-tickets {
   width: 170px;
   height: 140px;
@@ -104,7 +106,9 @@
   z-index: 99;
   right: 80px;
   bottom: 80px;
-
+  &:hover {
+    cursor: pointer;
+  }
   @media (max-width: 991px) {
     width: 96px;
     height: 80px;
