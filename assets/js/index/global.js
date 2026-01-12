@@ -85,29 +85,43 @@ export function scrollToSection() {
   gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
 
   const menuLinks = document.querySelectorAll(".header-menu a");
+  const ctaTicketsLinks = document.querySelectorAll("#cta-tickets a");
   const sections = document.querySelectorAll("section[id]");
   const headerMenu = document.querySelector(".header-menu");
   const hambuger = document.querySelector(".header-hambuger");
+
+  function handleScrollClick(e, link) {
+    e.preventDefault();
+
+    menuLinks.forEach((item) => item.classList.remove("active"));
+    link.classList.add("active");
+
+    if (window.innerWidth <= 991) {
+      headerMenu?.classList.remove("active");
+      hambuger?.classList.remove("active");
+    }
+
+    const targetId = link.getAttribute("href");
+
+    gsap.to(window, {
+      duration: 0.5,
+      scrollTo: {
+        y: targetId,
+        offsetY: 0,
+      },
+      ease: "none",
+    });
+  }
+
   menuLinks.forEach((link) => {
     link.addEventListener("click", function (e) {
-      e.preventDefault();
+      handleScrollClick(e, this);
+    });
+  });
 
-      menuLinks.forEach((item) => item.classList.remove("active"));
-      this.classList.add("active");
-      if (window.innerWidth <= 991) {
-        headerMenu.classList.remove("active");
-        hambuger.classList.remove("active");
-      }
-      const targetId = this.getAttribute("href");
-
-      gsap.to(window, {
-        duration: 0.5,
-        scrollTo: {
-          y: targetId,
-          offsetY: 0,
-        },
-        ease: "none",
-      });
+  ctaTicketsLinks.forEach((link) => {
+    link.addEventListener("click", function (e) {
+      handleScrollClick(e, this);
     });
   });
 
