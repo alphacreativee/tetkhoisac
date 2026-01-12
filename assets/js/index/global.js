@@ -85,7 +85,7 @@ export function scrollToSection() {
   gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
 
   const menuLinks = document.querySelectorAll(".header-menu a");
-  const ctaTicketsLinks = document.querySelectorAll("#cta-tickets a");
+  const ctaTicketsLinks = document.querySelectorAll("#cta-tickets ");
   const sections = document.querySelectorAll("section[id]");
   const headerMenu = document.querySelector(".header-menu");
   const hambuger = document.querySelector(".header-hambuger");
@@ -113,6 +113,33 @@ export function scrollToSection() {
     });
   }
 
+  function handleCtaTicketsClick(e, link) {
+    e.preventDefault();
+
+    menuLinks.forEach((item) => item.classList.remove("active"));
+
+    // Tìm link trong menu tương ứng với #form và active nó
+    const formMenuLink = document.querySelector('.header-menu a[href="#form"]');
+    if (formMenuLink) {
+      formMenuLink.classList.add("active");
+    }
+
+    if (window.innerWidth <= 991) {
+      headerMenu?.classList.remove("active");
+      hambuger?.classList.remove("active");
+    }
+
+    // Scroll tới section #form
+    gsap.to(window, {
+      duration: 0.5,
+      scrollTo: {
+        y: "#form",
+        offsetY: 0,
+      },
+      ease: "none",
+    });
+  }
+
   menuLinks.forEach((link) => {
     link.addEventListener("click", function (e) {
       handleScrollClick(e, this);
@@ -121,7 +148,7 @@ export function scrollToSection() {
 
   ctaTicketsLinks.forEach((link) => {
     link.addEventListener("click", function (e) {
-      handleScrollClick(e, this);
+      handleCtaTicketsClick(e, this);
     });
   });
 
