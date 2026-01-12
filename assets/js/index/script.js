@@ -165,8 +165,9 @@ const init = () => {
   toggleMobileMenu();
   scrollToTop();
   header();
-  countdownTimer();
 };
+// Gọi sau khi DOM ready
+document.addEventListener("DOMContentLoaded", countdownTimer);
 preloadImages("img").then(() => {
   init();
 });
