@@ -80,7 +80,7 @@ function formRegister() {
     const formDataObj = Object.fromEntries(new FormData(form).entries());
 
     fetch(
-      "https://script.google.com/macros/s/AKfycbwSqkHjNG-uc6rm4Pfbhtqsd2h3UQCCJwpFfBD-3LW6QSpYCrSdlXalfWrdPIG9Z4I/exec",
+      "https://script.google.com/macros/s/AKfycbwfgsfXXz_Nd8CUlssY1V8U40BJmR890mM6gP7RYfis6NYFkMJ0iPLyN8prQEeu4x-_/exec",
       {
         method: "POST",
         body: formData
